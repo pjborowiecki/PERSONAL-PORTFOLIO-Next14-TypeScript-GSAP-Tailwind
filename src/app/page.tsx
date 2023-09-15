@@ -1,13 +1,26 @@
-import { cn } from "@/lib/utils"
-import { gradient, subtitle, title } from "@/components/primitives"
+"use client"
 
-export default function Home() {
+import * as React from "react"
+
+import { initializeLocomotiveScroll } from "@/lib/utils"
+import { AboutSection } from "@/components/sections/about"
+import { ContactSection } from "@/components/sections/contact"
+import { HeroSection } from "@/components/sections/hero"
+import { ProjectsSection } from "@/components/sections/projects"
+import { ServicesSection } from "@/components/sections/services"
+
+export default function HomePage() {
+  React.useEffect(() => {
+    void initializeLocomotiveScroll()
+  }, [])
+
   return (
     <main>
-      <h1>Hello World!</h1>
-      <h2 className={cn(title(), gradient())}>This is a title example</h2>
-
-      <h3 className={subtitle()}>This is a subtitle example</h3>
+      <HeroSection />
+      <AboutSection />
+      <ServicesSection />
+      <ProjectsSection />
+      <ContactSection />
     </main>
   )
 }

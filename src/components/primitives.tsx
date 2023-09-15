@@ -20,7 +20,7 @@ export const gradient = tv({
     },
   },
   defaultVariants: {
-    color: "violet",
+    color: "turquoise",
     direction: "toB",
   },
   compoundVariants: [
@@ -42,13 +42,12 @@ export const gradient = tv({
 })
 
 export const title = tv({
-  base: "tracking-tight inline font-semibold",
+  base: "tracking-tight inline font-semibold font-hankenGrotesk",
   variants: {
     size: {
-      sm: "text-3xl lg:text-4xl",
-      md: "text-[2.5rem] lg:text-5xl leading-9",
-      lg: "text-4xl lg:text-6xl",
-      xl: "text-[200px]",
+      sm: "text-4xl lg:text-5xl",
+      md: "text-[3rem] lg:text-6xl leading-9",
+      lg: "text-5xl lg:text-7xl",
     },
     fullWidth: {
       true: "w-full block",

@@ -11,6 +11,12 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        hankenGrotesk: ["var(--font-hanken-grotesk)"],
+      },
+      fontSize: {
+        clampParagraph: "clamp(1rem, 4vw, 2.25rem)",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

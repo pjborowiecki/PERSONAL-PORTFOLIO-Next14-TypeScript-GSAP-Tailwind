@@ -2,10 +2,11 @@ import "@/styles/globals.css"
 
 import type { Metadata } from "next"
 
-import { fontSans } from "@/config/fonts"
+import { fontHankenGrotesk, fontInter } from "@/config/fonts"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
-import { Navbar } from "@/components/layouts/navbar"
+import { Footer } from "@/components/layouts/footer"
+import { Header } from "@/components/layouts/header"
 import { ThemeProvider } from "@/components/providers"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 
@@ -60,13 +61,15 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased dark:bg-dark-base",
-          fontSans.variable
+          "font-hankenGrotesk min-h-screen bg-background antialiased",
+          fontInter.variable,
+          fontHankenGrotesk.variable
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          <Navbar />
+          <Header />
           {children}
+          <Footer />
           <TailwindIndicator />
         </ThemeProvider>
       </body>

@@ -1,13 +1,13 @@
-import { Fira_Code as FontMono, Inter as FontSans } from "next/font/google"
+import { Hanken_Grotesk, Inter } from "next/font/google"
 
 // Montserrat
 
-export const fontSans = FontSans({
+export const fontInter = Inter({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-inter",
 })
 
-export const fontMono = FontMono({
+export const fontHankenGrotesk = Hanken_Grotesk({
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-hanken-grotesk",
 })
