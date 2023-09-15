@@ -6,6 +6,7 @@ import { fontSans } from "@/config/fonts"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Navbar } from "@/components/layouts/navbar"
+import { ThemeProvider } from "@/components/providers"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 
 export const metadata: Metadata = {
@@ -59,13 +60,15 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen bg-background font-sans antialiased dark:bg-dark-base",
           fontSans.variable
         )}
       >
-        <Navbar />
-        {children}
-        <TailwindIndicator />
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <Navbar />
+          {children}
+          <TailwindIndicator />
+        </ThemeProvider>
       </body>
     </html>
   )

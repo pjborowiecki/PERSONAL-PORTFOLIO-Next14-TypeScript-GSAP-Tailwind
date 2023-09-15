@@ -1,28 +1,27 @@
 import { tv } from "tailwind-variants"
 
-export const title = tv({
-  base: "tracking-tight inline font-semibold",
+export const gradient = tv({
   variants: {
     color: {
-      violet: "from-[#FF1CF7] to-[#b249f8]",
-      yellow: "from-[#FF705B] to-[#FFB457]",
-      blue: "from-[#5EA2EF] to-[#0072F5]",
-      cyan: "from-[#00b7fa] to-[#01cfea]",
-      green: "from-[#6FEE8D] to-[#17c964]",
-      pink: "from-[#FF72E1] to-[#F54C7A]",
-      foreground: "dark:from-[#FFFFFF] dark:to-[#4B4B4B]",
+      violet: "from-violet-base to-violet-alt",
+      yellow: "from-yallow-base to-yellow-alt",
+      blue: "from-blue-base to-blue-alt",
+      cyan: "from-cyan-base to-cyan-alt",
+      green: "from-green-base to-green-alt",
+      turquoise: "from-turquoise-base to-turquoise-alt",
+      pink: "from-pink-base to-pink-alt",
+      dark: "from-dark-base to-dark-alt",
     },
-    size: {
-      sm: "text-3xl lg:text-4xl",
-      md: "text-[2.3rem] lg:text-5xl leading-9",
-      lg: "text-4xl lg:text-6xl",
-    },
-    fullWidth: {
-      true: "w-full block",
+    direction: {
+      toT: "bg-gradient-to-t",
+      toB: "bg-gradient-to-b",
+      toL: "bg-gradient-to-l",
+      toR: "bg-gradient-to-r",
     },
   },
   defaultVariants: {
-    size: "md",
+    color: "violet",
+    direction: "toB",
   },
   compoundVariants: [
     {
@@ -32,12 +31,32 @@ export const title = tv({
         "blue",
         "cyan",
         "green",
+        "turquoise",
         "pink",
-        "foreground",
+        "dark",
       ],
-      class: "bg-clip-text text-transparent bg-gradient-to-b",
+      direction: "toB",
+      class: "bg-clip-text text-transparent",
     },
   ],
+})
+
+export const title = tv({
+  base: "tracking-tight inline font-semibold",
+  variants: {
+    size: {
+      sm: "text-3xl lg:text-4xl",
+      md: "text-[2.5rem] lg:text-5xl leading-9",
+      lg: "text-4xl lg:text-6xl",
+      xl: "text-[200px]",
+    },
+    fullWidth: {
+      true: "w-full block",
+    },
+  },
+  defaultVariants: {
+    size: "md",
+  },
 })
 
 export const subtitle = tv({

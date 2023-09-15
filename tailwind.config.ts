@@ -65,9 +65,17 @@ module.exports = {
           base: "hsl(var(--green-base))",
           alt: "hsl(var(--green-alt))",
         },
+        turquoise: {
+          base: "hsl(var(--turquoise-base))",
+          alt: "hsl(var(--turquoise-alt))",
+        },
         pink: {
           base: "hsl(var(--pink-base))",
           alt: "hsl(var(--pink-alt))",
+        },
+        dark: {
+          base: "hsl(var(--dark-base))",
+          alt: "hsl(var(--dark-alt))",
         },
       },
       borderRadius: {
