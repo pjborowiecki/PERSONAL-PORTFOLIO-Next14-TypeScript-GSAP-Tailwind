@@ -1,13 +1,17 @@
 import "@/styles/globals.css"
 
 import type { Metadata } from "next"
+import { Providers } from "@/providers/providers"
 
-import { fontHankenGrotesk, fontInter } from "@/config/fonts"
+import {
+  fontFoundersGroteskCondensed,
+  fontHankenGrotesk,
+  fontInter,
+} from "@/config/fonts"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Footer } from "@/components/layouts/footer"
 import { Header } from "@/components/layouts/header"
-import { ThemeProvider } from "@/components/providers"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 
 export const metadata: Metadata = {
@@ -61,17 +65,18 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
     <html lang="en">
       <body
         className={cn(
-          "font-hankenGrotesk min-h-screen bg-background antialiased",
+          "min-h-screen bg-newDark-base font-hankenGrotesk antialiased",
           fontInter.variable,
-          fontHankenGrotesk.variable
+          fontHankenGrotesk.variable,
+          fontFoundersGroteskCondensed.variable
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+        <Providers attribute="class" defaultTheme="dark" enableSystem>
           <Header />
           {children}
           <Footer />
           <TailwindIndicator />
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   )

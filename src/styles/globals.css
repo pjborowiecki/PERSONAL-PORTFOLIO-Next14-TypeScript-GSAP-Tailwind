@@ -49,6 +49,13 @@
     --dark-base: 0 0% 0%; /* #000000 */
     --dark-alt: 0 0% 11%; /*  #1C1C1C */
 
+    --new-dark-base: 0 0% 9%; /* #181818 */
+    --new-dark-alt: 0 0% 16%; /* #2A2A2A */
+    --new-text-base: 0 0% 77%; /* #C4C4C4 */
+    --new-text-alt: 0 0% 38%; /* #606060 */
+    --new-accent-base: 268 86% 56%; /* #8A30EF */
+    --new-accent-alt: 73 100% 62%; /* #D5FF3F */
+
     --radius: 0.5rem;
   }
 

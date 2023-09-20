@@ -4,7 +4,7 @@ export const gradient = tv({
   variants: {
     color: {
       violet: "from-violet-base to-violet-alt",
-      yellow: "from-yallow-base to-yellow-alt",
+      yellow: "from-yellow-base to-yellow-alt",
       blue: "from-blue-base to-blue-alt",
       cyan: "from-cyan-base to-cyan-alt",
       green: "from-green-base to-green-alt",
@@ -15,13 +15,15 @@ export const gradient = tv({
     direction: {
       toT: "bg-gradient-to-t",
       toB: "bg-gradient-to-b",
+      toBr: "bg-gradient-to-br",
+      toBl: "bg-gradient-to-bl",
       toL: "bg-gradient-to-l",
       toR: "bg-gradient-to-r",
     },
   },
   defaultVariants: {
     color: "turquoise",
-    direction: "toB",
+    direction: "toBr",
   },
   compoundVariants: [
     {
@@ -35,7 +37,7 @@ export const gradient = tv({
         "pink",
         "dark",
       ],
-      direction: "toB",
+      direction: "toBr",
       class: "bg-clip-text text-transparent",
     },
   ],

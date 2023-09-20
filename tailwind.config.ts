@@ -13,9 +13,13 @@ module.exports = {
     extend: {
       fontFamily: {
         hankenGrotesk: ["var(--font-hanken-grotesk)"],
+        foundersGroteskCondensed: ["var(--font-founders-grotesk-condensed)"],
       },
       fontSize: {
         clampParagraph: "clamp(1rem, 4vw, 2.25rem)",
+      },
+      screens: {
+        "w-1560": "1560px",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -83,11 +87,29 @@ module.exports = {
           base: "hsl(var(--dark-base))",
           alt: "hsl(var(--dark-alt))",
         },
+        newDark: {
+          base: "hsl(var(--new-dark-base))",
+          alt: "hsl(var(--new-dark-alt))",
+        },
+        newText: {
+          base: "hsl(var(--new-text-base))",
+          alt: "hsl(var(--new-text-alt))",
+        },
+        newAccent: {
+          base: "hsl(var(--new-accent-base))",
+          alt: "hsl(var(--new-accent-alt))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      rotate: {
+        135: "135deg",
+      },
+      transitionDuration: {
+        "1000": "1000ms",
       },
       keyframes: {
         "accordion-down": {

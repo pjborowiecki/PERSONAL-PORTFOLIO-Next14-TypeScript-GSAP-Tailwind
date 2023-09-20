@@ -30,6 +30,6 @@ const config = {
       rootDir: ["./"],
     },
   },
-};
+}
 
-module.exports = config;
+module.exports = config

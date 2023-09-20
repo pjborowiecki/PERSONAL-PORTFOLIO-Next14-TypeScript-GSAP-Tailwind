@@ -1,4 +1,4 @@
-await import("./src/env.mjs");
+await import("./src/env.mjs")
 
 /** @type {import("next").NextConfig} */
 const nextConfig = {
@@ -6,5 +6,8 @@ const nextConfig = {
   experimental: {
     serverActions: true,
   },
-};
-export default nextConfig;
+  images: {
+    domains: ["cdn.sanity.io"],
+  },
+}
+export default nextConfig
