@@ -1,7 +1,7 @@
 import type { Project } from "@/types"
 
-import { ProjectCard } from "@/components/project-card"
 import { ProjectCategoryFilters } from "@/components/project-category-filters"
+import { ProjectList } from "@/components/project-list"
 
 interface ProjectsSectionProps {
   projects: Project[]
@@ -13,9 +13,9 @@ export function ProjectsSection({
   return (
     <section
       id="services"
-      className="mx-auto min-h-screen w-full max-w-[1920px]"
+      className="mx-auto min-h-screen w-full max-w-[2560px]"
     >
-      <div className="mx-[4rem] overflow-hidden">
+      <div className="mx-[4rem] overflow-visible">
         <div className="flex items-end justify-center gap-[4rem] py-[120px]">
           <div className="flex w-3/5 flex-col gap-[28px]">
             <h2 className="whitespace-nowrap text-[112px] font-black uppercase leading-[110%] tracking-tight text-newText-base">
@@ -28,21 +28,12 @@ export function ProjectsSection({
               my journey.
             </p>
           </div>
-          <div className="w-2/5">
+          <div className="flex w-2/5 justify-end">
             <ProjectCategoryFilters />
           </div>
         </div>
-        <div className="flex w-full flex-col">
-          {projects?.length > 0 ? (
-            projects.map((project) => (
-              <ProjectCard key={project.title} project={project} />
-            ))
-          ) : (
-            <div className="flex items-center justify-center">
-              <p>Nothing here yet. Please check back soon</p>
-            </div>
-          )}
-        </div>
+
+        <ProjectList projects={projects} />
       </div>
     </section>
   )

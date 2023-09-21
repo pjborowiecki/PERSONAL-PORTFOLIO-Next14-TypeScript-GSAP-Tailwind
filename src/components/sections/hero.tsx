@@ -4,9 +4,9 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="mx-auto min-h-screen w-full max-w-[1920px] bg-newAccent-base"
+      className="mx-auto min-h-screen w-full max-w-[2560px] bg-gradient-to-br from-turquoise-base to-turquoise-alt"
     >
-      <div className="mx-[4rem] overflow-hidden">
+      <div className="mx-[4rem]">
         {/* Marquee */}
         <div></div>
       </div>

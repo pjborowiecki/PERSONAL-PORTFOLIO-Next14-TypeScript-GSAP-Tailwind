@@ -43,3 +43,21 @@ This project is a personal portfolio website built with Next.js and Tailwind CSS
 
 - use Sanity.io for projects
 - Mdx for Blog
+- Change useCDN to true before deploying
+
+      <!-- {/* <CardHeader className="group relative flex w-full justify-center">
+
+        <div className="absolute flex flex-col justify-center gap-4 text-[24px] font-light text-newText-base opacity-0 transition-all duration-200 ease-in-out group-hover:opacity-100">
+          <p>{project.shortDescription}</p>
+          <div className="flex w-full flex-wrap gap-2 whitespace-nowrap text-[14px]">
+            {project.tech.map((tech) => (
+              <div
+                key={tech}
+                className="rounded-full border border-newText-alt px-4 py-1 text-newText-alt"
+              >
+                {tech}
+              </div>
+            ))}
+          </div>
+        </div>
+      </CardHeader> */} -->

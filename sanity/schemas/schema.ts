@@ -30,16 +30,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
           type: "text",
         },
         {
-          name: "repoLink",
-          title: "Repo Link",
-          type: "url",
-        },
-        {
-          name: "liveDemoLink",
-          title: "Live Demo Link",
-          type: "url",
-        },
-        {
           name: "category",
           title: "Category",
           type: "string",
@@ -47,6 +37,30 @@ export const schema: { types: SchemaTypeDefinition[] } = {
             list: ["web dev", "deep learning", "mobile dev", "other"],
           },
           validation: (Rule) => Rule.required(),
+        },
+        {
+          name: "links",
+          title: "Links",
+          type: "object",
+          fields: [
+            {
+              name: "source_code",
+              title: "Source Code",
+              type: "url",
+            },
+            {
+              name: "live_demo",
+              title: "Live Demo",
+              type: "url",
+            },
+            {
+              name: "details",
+              title: "Details",
+              type: "string",
+              description:
+                "String representing a dynamic url part, e.g. 'projects/my-awesome-project",
+            },
+          ],
         },
         {
           name: "tech",

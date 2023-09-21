@@ -37,7 +37,7 @@ export function ProjectCategoryFilters() {
   }
 
   return (
-    <ul className="flex flex-wrap items-center justify-end gap-4 pl-[32px]">
+    <ul className="flex max-w-[700px] flex-wrap items-center justify-end gap-4">
       {projectCategories.map((category) => {
         const Icon = Icons[(category.icon as keyof typeof Icons) || "code"]
 

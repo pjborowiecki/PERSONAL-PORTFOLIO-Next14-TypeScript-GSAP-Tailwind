@@ -7,6 +7,8 @@ import { HeroSection } from "@/components/sections/hero"
 import { ProjectsSection } from "@/components/sections/projects"
 import { ServicesSection } from "@/components/sections/services"
 
+// export const revalidate = 60
+
 interface ProjectsSectionProps {
   searchParams: { [key: string]: string | undefined }
 }
@@ -36,5 +38,3 @@ export default async function HomePage({
     </main>
   )
 }
-
-// export const revalidate = 60

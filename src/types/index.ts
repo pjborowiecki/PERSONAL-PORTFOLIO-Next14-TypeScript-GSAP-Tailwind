@@ -1,18 +1,25 @@
+type ProjectLinks = {
+  source_code?: string
+  live_demo?: string
+  details?: string
+}
+
+type Slug = {
+  current: string
+  _type: string
+}
+
 export interface Project {
   _id: string
   title: string
-  slug: {
-    current: string
-    _type: string
-  }
+  slug: Slug
+  links: ProjectLinks
   category: string
   tech: string[]
   shortDescription: string
   description: string
-  repoLink: string
-  liveDemoLink: string
   mainImage: string
-  images: string[]
+  images?: string[]
 }
 
 export interface UrlQueryParams {

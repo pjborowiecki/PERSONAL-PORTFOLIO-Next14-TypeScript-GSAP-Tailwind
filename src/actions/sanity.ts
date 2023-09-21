@@ -1,5 +1,6 @@
 "use server"
 
+import { revalidatePath } from "next/cache"
 import { readClient } from "@/sanity/lib/client"
 import type { Project } from "@/types"
 import { groq } from "next-sanity"
@@ -29,13 +30,13 @@ export const getProjectsAction = async (params: GetProjectsActionParams) => {
         shortDescription,
         description,
         category,
-        repoLink,
-        liveDemoLink,
         tech,
+        links,
         "mainImage": mainImage.asset->url,
         "images": images[].asset->url,
         }`
     )
+
     return projects
   } catch (error) {
     console.log(error)
