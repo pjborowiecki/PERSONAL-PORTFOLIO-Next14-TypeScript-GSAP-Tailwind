@@ -39,6 +39,14 @@ This project is a personal portfolio website built with Next.js and Tailwind CSS
 
 - I feel most comfortable with making things work, rather than look pretty, but I do have a sense of esthetics and knowledge of the fundamental design principles. I'm also a big fan of minimalism and simplicity.
 
+- INTRO SECTION:
+
+  - I am a dedicated full-stack developer, committed to delivering innovative web and software projects for clients across diverse industries.
+
+  - I partner with entrepreneurs, businesses, and individuals to turn their ideas into high-quality, functional software applications.
+
+  - I thrive on complex challenges, offering expertise in both front-end and back-end development to create seamless digital experiences.
+
 - Notes:
 
 - use Sanity.io for projects

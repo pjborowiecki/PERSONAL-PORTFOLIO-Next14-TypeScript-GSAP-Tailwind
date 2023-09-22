@@ -30,7 +30,7 @@ export function ProjectCard({
       onMouseLeave={() => {
         setPreviewModal({ modalVisible: false, index })
       }}
-      className="after:ease-[cubic-bezier(0.99,0.01,0.1,0.39)] group relative flex w-full items-center justify-between gap-[190px] border-t border-newText-alt/40 bg-transparent py-12 pl-[60px] pr-[30px] text-newText-alt transition-all duration-300 ease-in-out after:absolute after:left-0 after:top-0 after:z-[-1] after:h-full after:w-full after:scale-y-0 after:bg-newDark-alt after:transition-all after:duration-300 after:content-[''] last-of-type:border-b hover:after:scale-y-100"
+      className="after:ease-[cubic-bezier(0.99,0.01,0.1,0.39)] group relative flex w-full items-center justify-between gap-[190px] border-b border-newText-alt/40 bg-transparent py-12 pl-[60px] pr-[30px] text-newText-alt transition-all duration-300 ease-in-out after:absolute after:left-0 after:top-0 after:z-[-1] after:h-full after:w-full after:scale-y-0 after:bg-newDark-alt after:transition-all after:duration-300 after:content-[''] hover:after:scale-y-100"
     >
       <div className="w-full">
         <h3 className="text-[62px] font-medium tracking-wide text-white transition-all duration-200 ease-in-out group-hover:text-white">
@@ -46,7 +46,7 @@ export function ProjectCard({
                   <Link
                     key={index}
                     href={value}
-                    className="flex items-center gap-4 underline-offset-8 after:inline-flex after:h-2 after:w-2 after:rounded-full after:bg-turquoise-base after:text-turquoise-base after:content-[''] last-of-type:after:hidden hover:underline group-hover:text-turquoise-base group-hover:after:bg-newText-base"
+                    className="flex items-center gap-4 capitalize underline-offset-8 after:inline-flex after:h-2 after:w-2 after:rounded-full after:bg-turquoise-base after:text-turquoise-base after:content-[''] last-of-type:after:hidden hover:underline group-hover:text-turquoise-base group-hover:after:bg-newText-base"
                   >
                     {key.replace(/_/g, " ")}
                   </Link>

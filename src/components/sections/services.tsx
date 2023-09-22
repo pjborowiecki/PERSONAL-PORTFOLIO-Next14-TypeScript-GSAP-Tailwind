@@ -1,7 +1,7 @@
 export function ServicesSection() {
   return (
     <section
-      id="services"
+      id="services-section"
       className="flex min-h-[600px] bg-gradient-to-br from-turquoise-base to-turquoise-alt"
     >
       <div className="items-center justify-center">

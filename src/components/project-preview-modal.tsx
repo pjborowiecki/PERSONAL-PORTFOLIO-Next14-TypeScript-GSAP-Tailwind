@@ -41,7 +41,7 @@ export function ProjectPreviewModal({
     window.addEventListener("mousemove", (e) => {
       const { pageX, pageY } = e
       xTo(pageX)
-      yTo(pageY)
+      yTo(pageY - 200)
     })
   }, [gsap])
 

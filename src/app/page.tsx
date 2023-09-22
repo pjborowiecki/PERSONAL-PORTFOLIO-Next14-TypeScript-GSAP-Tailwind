@@ -4,6 +4,7 @@ import { getProjectsAction } from "@/actions/sanity"
 import { AboutSection } from "@/components/sections/about"
 import { ContactSection } from "@/components/sections/contact"
 import { HeroSection } from "@/components/sections/hero"
+import { IntroSection } from "@/components/sections/intro"
 import { ProjectsSection } from "@/components/sections/projects"
 import { ServicesSection } from "@/components/sections/services"
 
@@ -31,6 +32,7 @@ export default async function HomePage({
   return (
     <main>
       <HeroSection />
+      <IntroSection />
       <AboutSection />
       <ServicesSection />
       <ProjectsSection projects={projects} />

@@ -26,10 +26,6 @@ export function ProjectList({ projects }: ProjectListProps) {
               setPreviewModal={setPreviewModal}
               project={project}
             />
-            <ProjectPreviewModal
-              projects={projects}
-              previewModal={previewModal}
-            />
           </div>
         ))
       ) : (
@@ -39,6 +35,7 @@ export function ProjectList({ projects }: ProjectListProps) {
           </p>
         </div>
       )}
+      <ProjectPreviewModal projects={projects} previewModal={previewModal} />
     </div>
   )
 }

@@ -72,9 +72,7 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
         )}
       >
         <Providers attribute="class" defaultTheme="dark" enableSystem>
-          <Header />
           {children}
-          <Footer />
           <TailwindIndicator />
         </Providers>
       </body>
