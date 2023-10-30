@@ -1,7 +1,8 @@
 import "@/styles/globals.css"
 
 import { type Metadata, type Viewport } from "next"
-import { Providers } from "@/providers/providers"
+import { GsapProvider } from "@/providers/gsap-provider"
+import { ThemeProvider } from "@/providers/theme-provider"
 
 import {
   fontFoundersGroteskCondensed,
@@ -60,12 +61,14 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
           fontFoundersGroteskCondensed.variable
         )}
       >
-        <Providers attribute="class" defaultTheme="dark" enableSystem>
-          <Header />
-          {children}
-          <Footer />
-          <TailwindIndicator />
-        </Providers>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <GsapProvider>
+            <Header />
+            {children}
+            <Footer />
+            <TailwindIndicator />
+          </GsapProvider>
+        </ThemeProvider>
       </body>
     </html>
   )
