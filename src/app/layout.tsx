@@ -1,6 +1,6 @@
 import "@/styles/globals.css"
 
-import type { Metadata } from "next"
+import { type Metadata, type Viewport } from "next"
 import { Providers } from "@/providers/providers"
 
 import {
@@ -14,40 +14,29 @@ import { Footer } from "@/components/layouts/footer"
 import { Header } from "@/components/layouts/header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 
-export const metadata: Metadata = {
-  title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
-  creator: "pjborowiecki",
-  authors: [
-    {
-      name: "Piotr Borowiecki (@pjborowiecki)",
-      url: "https://github.com/pjborowiecki",
-    },
-  ],
-  keywords: [
-    "Software developer",
-    "Programmer",
-    "Web developer",
-    "Full stack developer",
-    "Frontend developer",
-    "Backend developer",
-    "React developer",
-    "AI engineer",
-    "Machine learning engineer",
-    "Data scientist",
-    "Data engineer",
-    "Python developer",
-    "JavaScript developer",
-    "TypeScript developer",
-    "Node.js developer",
-    "Blockchain developer",
-  ],
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  minimumScale: 1,
+  maximumScale: 1,
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+}
+
+export const metadata: Metadata = {
+  title: {
+    default: siteConfig.nameLong,
+    template: `%s - ${siteConfig.nameLong}`,
+  },
+  description: siteConfig.description,
+  creator: siteConfig.author,
+  authors: [
+    {
+      name: siteConfig.author,
+      url: siteConfig.links.github,
+    },
   ],
   icons: {
     icon: "/favicon.ico",
@@ -72,7 +61,9 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
         )}
       >
         <Providers attribute="class" defaultTheme="dark" enableSystem>
+          <Header />
           {children}
+          <Footer />
           <TailwindIndicator />
         </Providers>
       </body>

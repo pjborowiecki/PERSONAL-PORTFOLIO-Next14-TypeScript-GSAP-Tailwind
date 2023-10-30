@@ -30,7 +30,7 @@ export function ProjectCard({
       onMouseLeave={() => {
         setPreviewModal({ modalVisible: false, index })
       }}
-      className="after:ease-[cubic-bezier(0.99,0.01,0.1,0.39)] group relative flex w-full items-center justify-between gap-[190px] border-b border-newText-alt/40 bg-transparent py-12 pl-[60px] pr-[30px] text-newText-alt transition-all duration-300 ease-in-out after:absolute after:left-0 after:top-0 after:z-[-1] after:h-full after:w-full after:scale-y-0 after:bg-newDark-alt after:transition-all after:duration-300 after:content-[''] hover:after:scale-y-100"
+      className="group relative flex w-full items-center justify-between gap-[190px] border-b border-newText-alt/40 bg-transparent py-12 pl-[60px] pr-[30px] text-newText-alt transition-all duration-300 ease-in-out after:absolute after:left-0 after:top-0 after:z-[-1] after:h-full after:w-full after:scale-y-0 after:bg-newDark-alt after:transition-all after:duration-300 after:ease-in-out after:content-[''] hover:after:scale-y-100"
     >
       <div className="w-full">
         <h3 className="text-[62px] font-medium tracking-wide text-white transition-all duration-200 ease-in-out group-hover:text-white">

@@ -13,7 +13,7 @@ export const fontHankenGrotesk = Hanken_Grotesk({
 
 export const fontFoundersGroteskCondensed = localFont({
   src: "../../public/fonts/founders-grotesk-condensed-bold.ttf",
-  weight: "bold",
+  weight: "700",
   style: "normal",
   variable: "--font-founders-grotesk-condensed",
 })

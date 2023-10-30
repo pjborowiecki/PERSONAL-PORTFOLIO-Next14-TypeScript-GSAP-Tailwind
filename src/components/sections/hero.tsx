@@ -32,54 +32,42 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="mx-auto flex min-h-screen w-full max-w-[2560px] flex-col bg-gradient-to-br from-turquoise-base to-turquoise-alt"
+      className="mx-auto flex min-h-[120vh] w-full max-w-[2560px] flex-col bg-gradient-to-br from-turquoise-base to-turquoise-alt"
     >
-      <div className="mx-[4rem] text-newDark-base">
-        <div className="flex items-center justify-between border-b py-8">
-          <div>
-            <p>Piotr J Borowiecki</p>
-          </div>
-
-          <div className="flex items-center justify-center gap-4">
-            <ul className="flex gap-4">
-              <li>About</li>
-              <li>Services</li>
-              <li>Projects</li>
-              <li>Blog</li>
-            </ul>
-            <Button>Let's Talk</Button>
+      <div className="relative min-h-[120vh]">
+        <div className="mx-[4rem] flex h-full min-h-screen flex-1 flex-col justify-center text-newDark-base">
+          <div className="mx-[4rem] flex flex-col gap-4 py-[70px]">
+            <h1 className="max-w-[1200px] font-hankenGrotesk text-[186px] font-black uppercase leading-[100%] tracking-tight text-newDark-base">
+              Reliable Software Developer
+            </h1>
+            <p className="text-[32px] leading-[100%]">for Ambitious Projects</p>
+            <h2 className="">Delivering quality, one line at a time</h2>
           </div>
         </div>
 
-        <div className="mx-[4rem] flex flex-col gap-4 py-[70px]">
-          <h1 className=" max-w-[1200px] font-hankenGrotesk text-[186px] font-black uppercase leading-[100%] tracking-tight text-newDark-base">
-            Reliable Software Developer
-          </h1>
-          <p className="text-[32px] leading-[100%]">for Ambitious Projects</p>
-          <h2 className="">Delivering quality, one line at a time</h2>
+        <div>
+          <ul className="absolute bottom-[-70px] left-0 flex h-[160px] w-full rotate-[-2deg] items-center justify-center gap-4 whitespace-nowrap bg-white">
+            {marqueeItems.map((item, index) => (
+              <li
+                key={index}
+                className="flex items-center justify-center gap-4 text-[48px] font-bold capitalize text-black after:inline-flex after:h-3 after:w-3 after:rounded-full after:bg-newDark-alt after:content-['']"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+          <ul className="absolute bottom-0 flex h-[160px] w-full rotate-[3deg] items-center justify-center gap-4 whitespace-nowrap bg-white">
+            {marqueeItems.map((item, index) => (
+              <li
+                key={index}
+                className="flex items-center justify-center gap-4 text-[48px] font-bold capitalize text-black after:inline-flex after:h-3 after:w-3 after:rounded-full after:bg-newDark-alt after:content-['']"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
-
-      <ul className="absolute bottom-[-70px] left-0 flex h-[160px] w-full rotate-[-2deg] items-center justify-center gap-4 whitespace-nowrap bg-white">
-        {marqueeItems.map((item, index) => (
-          <li
-            key={index}
-            className="flex items-center justify-center gap-4 text-[48px] font-bold capitalize text-black after:inline-flex after:h-3 after:w-3 after:rounded-full after:bg-newDark-alt after:content-['']"
-          >
-            {item}
-          </li>
-        ))}
-      </ul>
-      <ul className="absolute bottom-0 flex h-[160px] w-full rotate-[3deg] items-center justify-center gap-4 whitespace-nowrap bg-white">
-        {marqueeItems.map((item, index) => (
-          <li
-            key={index}
-            className="flex items-center justify-center gap-4 text-[48px] font-bold capitalize text-black after:inline-flex after:h-3 after:w-3 after:rounded-full after:bg-newDark-alt after:content-['']"
-          >
-            {item}
-          </li>
-        ))}
-      </ul>
       {/* className="flex items-center gap-4 capitalize underline-offset-8
       after:inline-flex after:h-2 after:w-2 after:rounded-full
       after:bg-turquoise-base after:text-turquoise-base after:content-['']

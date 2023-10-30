@@ -12,6 +12,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
+        fontGeistSans: ["var(--font-geist-sans)"],
         hankenGrotesk: ["var(--font-hanken-grotesk)"],
         foundersGroteskCondensed: ["var(--font-founders-grotesk-condensed)"],
       },

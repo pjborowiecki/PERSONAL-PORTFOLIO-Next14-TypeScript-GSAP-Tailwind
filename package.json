@@ -1,8 +1,8 @@
 {
-  "name": "personal_portfolio_new_built_with_nextjs_and_shadcn",
-  "description": "Personal portfolio website built with Next.js and Tailwind CSS",
-  "version": "0.0.1",
   "private": true,
+  "name": "personal_portfolio_new_built_with_nextjs_and_shadcn",
+  "description": "Personal portfolio website of Piotr Borowiecki - a recent Computer Science graduate from Durham University and an aspiring full-stack software developer. Built with TypeScript, Next.js 14, Sanity.io, Tailwind CSS, ShadCn-UI, and other fantastic tools.",
+  "version": "0.0.1",
   "license": "MIT",
   "author": {
     "name": "Piotr Borowiecki",
@@ -10,10 +10,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pjborowiecki"
+    "url": "https://github.com/pjborowiecki/PERSONAL-PORTFOLIO-Next14-Sanity-TypeScript-GSAP-Tailwind"
+  },
+  "bugs": {
+    "url": "https://github.com/pjborowiecki/PERSONAL-PORTFOLIO-Next14-Sanity-TypeScript-GSAP-Tailwind/issues"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo --experimental-https",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -24,14 +27,14 @@
     "shadcn:add": "npx shadcn-ui@latest add"
   },
   "dependencies": {
-    "@hookform/resolvers": "^3.3.1",
+    "@hookform/resolvers": "^3.3.2",
     "@radix-ui/react-icons": "^1.3.0",
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-slot": "^1.0.2",
     "@react-email/components": "^0.0.7",
     "@react-email/tailwind": "^0.0.8",
-    "@sanity/image-url": "1",
-    "@sanity/vision": "3",
+    "@sanity/image-url": "^1.0.2",
+    "@sanity/vision": "^3.18.1",
     "@t3-oss/env-nextjs": "^0.6.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
@@ -39,33 +42,33 @@
     "gsap": "^3.12.2",
     "locomotive-scroll": "5.0.0-beta.8",
     "lucide-react": "^0.279.0",
-    "next": "13.4.19",
-    "next-sanity": "5",
+    "next": "^14.0.0",
+    "next-sanity": "^5.5.10",
     "next-themes": "^0.2.1",
     "query-string": "^8.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-email": "^1.9.4",
-    "react-hook-form": "^7.46.1",
-    "resend": "^1.0.0",
-    "sanity": "3",
-    "sonner": "^0.7.1",
-    "styled-components": "5.2",
+    "react-email": "^1.9.5",
+    "react-hook-form": "^7.47.0",
+    "resend": "^1.1.0",
+    "sanity": "^3.18.1",
+    "sonner": "^0.7.4",
+    "styled-components": "~5.2.3",
     "tailwind-merge": "^1.14.0",
-    "tailwind-variants": "^0.1.14",
+    "tailwind-variants": "^0.1.18",
     "tailwindcss-animate": "^1.0.7",
-    "zod": "^3.22.2"
+    "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@ianvs/prettier-plugin-sort-imports": "^4.1.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
     "@tailwindcss/typography": "^0.5.10",
-    "@types/eslint": "^8.44.2",
-    "@types/locomotive-scroll": "^4.1.1",
+    "@types/eslint": "^8.44.6",
+    "@types/locomotive-scroll": "^4.1.2",
     "@types/node": "20.6.0",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
-    "@typescript-eslint/eslint-plugin": "^6.7.0",
-    "@typescript-eslint/parser": "^6.7.0",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
     "autoprefixer": "10.4.15",
     "eslint": "8.49.0",
     "eslint-config-next": "13.4.19",
@@ -73,8 +76,11 @@
     "eslint-plugin-tailwindcss": "^3.13.0",
     "postcss": "8.4.29",
     "prettier": "^3.0.3",
-    "prettier-plugin-tailwindcss": "^0.5.4",
+    "prettier-plugin-tailwindcss": "^0.5.6",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2"
+  },
+  "engine": {
+    "node": ">=18"
   }
 }
