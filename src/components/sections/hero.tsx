@@ -11,10 +11,10 @@ export function HeroSection() {
       id="hero"
       className="flex w-full flex-col items-center justify-center pb-[12rem]"
     >
-      <div className="container flex h-[3.3rem] w-full items-center justify-between text-newDark-alt">
+      <div className="container flex h-[3.2rem] w-full items-center justify-between text-newDark-alt">
         <div className="flex items-center justify-start gap-[0.6rem]">
           <div className="h-[1rem] w-[1rem] rounded-full bg-dark-alt" />
-          <p className="font-extrabold text-newDark-alt2">
+          <p className="text-[0.875rem] font-extrabold text-newDark-alt2">
             Open to work opportunities and taking bookings. Let&apos;s talk!
           </p>
         </div>
@@ -27,7 +27,7 @@ export function HeroSection() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="font-semibold leading-[100%] opacity-90 hover:text-turquoise-base hover:opacity-100 sm:text-[1.1rem]"
+                className="font-medium leading-[100%] opacity-90 hover:text-turquoise-base hover:opacity-100 sm:text-[1.1rem]"
               >
                 {item.label}
               </Link>
@@ -35,7 +35,7 @@ export function HeroSection() {
             <Link
               href="#contact"
               // className="rounded-full bg-gradient-to-r from-turquoise-base to-turquoise-alt px-[3rem] py-[1rem] font-bold text-newDark-alt3"
-              className="rounded-full border border-turquoise-base px-[2rem] py-[0.6rem] font-bold text-turquoise-base"
+              className="rounded-full border border-turquoise-base px-[1.5rem] py-[0.5rem] font-bold text-turquoise-base"
             >
               let&apos;s talk
             </Link>
