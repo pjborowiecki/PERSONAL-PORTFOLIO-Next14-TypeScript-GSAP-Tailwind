@@ -127,4 +127,9 @@
     width: 90px;
     height: 90px;
   }
+
+  .marqueeGradient {
+    background: linear-gradient(270deg, transparent, "#121212");
+    z-index: 1;
+  }
 }

@@ -35,19 +35,19 @@ export const siteConfig = {
   ],
   navItems: [
     {
-      label: "About",
+      label: "about",
       href: "#about",
     },
     {
-      label: "Services",
+      label: "services",
       href: "#services",
     },
     {
-      label: "Projects",
+      label: "projects",
       href: "#projects",
     },
     {
-      label: "Blog",
+      label: "blog",
       href: "/blog",
     },
   ],
