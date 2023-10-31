@@ -5,19 +5,16 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "3rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1800px",
       },
     },
     extend: {
       fontFamily: {
-        fontGeistSans: ["var(--font-geist-sans)"],
+        inter: ["var(--font-inter)"],
         hankenGrotesk: ["var(--font-hanken-grotesk)"],
         foundersGroteskCondensed: ["var(--font-founders-grotesk-condensed)"],
-      },
-      fontSize: {
-        clampParagraph: "clamp(1rem, 4vw, 2.25rem)",
       },
       screens: {
         "w-1560": "1560px",
@@ -91,6 +88,8 @@ module.exports = {
         newDark: {
           base: "hsl(var(--new-dark-base))",
           alt: "hsl(var(--new-dark-alt))",
+          alt2: "hsl(var(--new-dark-alt2))",
+          alt3: "hsl(var(--new-dark-alt3))",
         },
         newText: {
           base: "hsl(var(--new-text-base))",

@@ -32,11 +32,11 @@ export default async function HomePage({
   return (
     <main>
       <HeroSection />
-      <IntroSection />
+      {/* <IntroSection />
       <AboutSection />
       <ServicesSection />
       <ProjectsSection projects={projects} />
-      <ContactSection />
+      <ContactSection /> */}
     </main>
   )
 }

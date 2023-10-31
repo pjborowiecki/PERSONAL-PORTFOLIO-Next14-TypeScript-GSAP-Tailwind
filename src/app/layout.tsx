@@ -11,8 +11,7 @@ import {
 } from "@/config/fonts"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
-import { Footer } from "@/components/layouts/footer"
-import { Header } from "@/components/layouts/header"
+import { Footer } from "@/components/nav/footer"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 
 export const viewport: Viewport = {
@@ -55,17 +54,17 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-newDark-base font-hankenGrotesk antialiased",
-          fontInter.variable,
+          "bg-gradient-to-br from-turquoise-base to-turquoise-alt font-hankenGrotesk antialiased",
+          fontFoundersGroteskCondensed.variable,
           fontHankenGrotesk.variable,
-          fontFoundersGroteskCondensed.variable
+          fontInter.variable
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <GsapProvider>
-            <Header />
+            {/* <Header /> */}
             {children}
-            <Footer />
+            {/* <Footer /> */}
             <TailwindIndicator />
           </GsapProvider>
         </ThemeProvider>

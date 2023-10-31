@@ -51,6 +51,9 @@
 
     --new-dark-base: 0 0% 9%; /* #181818 */
     --new-dark-alt: 0 0% 16%; /* #2A2A2A */
+    --new-dark-alt2: 0 0% 8%; /* #141414 */
+    --new-dark-alt3: 0 0% 13%; /* #222222 */
+
     --new-text-base: 0 0% 77%; /* #C4C4C4 */
     --new-text-alt: 0 0% 38%; /* #606060 */
     --new-accent-base: 268 86% 56%; /* #8A30EF */
@@ -94,8 +97,10 @@
   * {
     @apply border-border;
   }
+
+  html,
   body {
-    @apply bg-background text-foreground;
+    @apply w-full bg-background text-foreground;
   }
 }
 
