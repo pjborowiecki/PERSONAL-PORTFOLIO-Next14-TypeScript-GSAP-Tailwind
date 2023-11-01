@@ -54,7 +54,7 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
     <html lang="en">
       <body
         className={cn(
-          "bg-gradient-to-br from-turquoise-base to-turquoise-alt font-hankenGrotesk antialiased",
+          "min-h-screen bg-gradient-to-br from-turquoise-base to-turquoise-alt font-hankenGrotesk antialiased",
           fontFoundersGroteskCondensed.variable,
           fontHankenGrotesk.variable,
           fontInter.variable
