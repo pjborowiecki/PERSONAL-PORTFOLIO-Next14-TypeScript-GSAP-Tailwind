@@ -13,7 +13,7 @@ export function ProjectsSection({
   return (
     <section
       id="projects-section"
-      className="mx-auto min-h-screen w-full max-w-[2560px] font-hankenGrotesk"
+      className="mx-auto min-h-screen w-full max-w-[2560px] bg-newDark-base font-hankenGrotesk"
     >
       <div className="mx-[4rem] overflow-visible">
         <div className="flex items-end justify-center gap-[4rem] py-[120px]">

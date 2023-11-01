@@ -6,7 +6,7 @@ export function ContactSection() {
   return (
     <section
       id="contact-section"
-      className="mx-auto flex max-w-[1560px] flex-col gap-[4.4rem] px-[3rem] py-[9rem] "
+      className="mx-auto flex max-w-[1560px] flex-col gap-[4.4rem] bg-newDark-base px-[3rem] py-[9rem]"
       aria-label="contact section"
     >
       <h3 className="text-center text-[72px] font-black tracking-tight">

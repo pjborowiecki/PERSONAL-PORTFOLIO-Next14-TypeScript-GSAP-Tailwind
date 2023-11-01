@@ -59,14 +59,16 @@ export default async function HomePage({
         </div>
 
         {/* Add some content here. Maybe Markqee? Maybe services? */}
-        <div className="h-[16rem]">another div. This is a place for the actual content</div>
+        <div className="h-[16rem]">
+          another div. This is a place for the actual content
+        </div>
       </section>
 
       <IntroSection />
-      {/* <AboutSection /> */}
-      {/* <ServicesSection /> */}
-      {/* <ProjectsSection projects={projects} /> */}
-      {/* <ContactSection /> */}
+      <AboutSection />
+      <ServicesSection />
+      <ProjectsSection projects={projects} />
+      <ContactSection />
     </main>
   )
 }
