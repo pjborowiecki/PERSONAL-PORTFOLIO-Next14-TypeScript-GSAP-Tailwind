@@ -2,11 +2,10 @@ export function ServicesSection() {
   return (
     <section
       id="services-section"
-      className="flex min-h-[600px] bg-gradient-to-br from-turquoise-base to-turquoise-alt"
+      aria-label="services-section"
+      className="min-h-screen"
     >
-      <div className="items-center justify-center">
-        <h2>Services section</h2>
-      </div>
+      Services section
     </section>
   )
 }

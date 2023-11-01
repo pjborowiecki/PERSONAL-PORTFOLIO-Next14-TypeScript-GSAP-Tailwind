@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import { submitContactFormAction } from "@/actions/contact-form"
+import { contactFormSchema } from "@/validations/contact-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { toast } from "sonner"
 import type { z } from "zod"
 
 import { catchError } from "@/lib/utils"
-import { contactFormSchema } from "@/lib/validations/contact-form"
 import { Icons } from "@/components/icons"
 import { Button } from "@/components/ui/button"
 import {

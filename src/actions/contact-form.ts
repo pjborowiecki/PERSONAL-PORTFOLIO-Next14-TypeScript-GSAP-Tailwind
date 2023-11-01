@@ -1,10 +1,10 @@
 "use server"
 
 import { env } from "@/env.mjs"
+import type { contactFormSchema } from "@/validations/contact-form"
 import type { z } from "zod"
 
 import { resend } from "@/config/resend"
-import type { contactFormSchema } from "@/lib/validations/contact-form"
 import { NewEnquiryEmail } from "@/components/emails/new-enquiry-email"
 
 export async function submitContactFormAction(

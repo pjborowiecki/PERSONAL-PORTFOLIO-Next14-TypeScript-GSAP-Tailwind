@@ -2,6 +2,7 @@ import "@/styles/globals.css"
 
 import { type Metadata, type Viewport } from "next"
 import { GsapProvider } from "@/providers/gsap-provider"
+import { LocomotiveProvider } from "@/providers/locomotive-provider"
 import { ThemeProvider } from "@/providers/theme-provider"
 
 import {
@@ -54,7 +55,7 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-gradient-to-br from-turquoise-base to-turquoise-alt font-hankenGrotesk antialiased",
+          "min-h-screen bg-background font-hankenGrotesk antialiased",
           fontFoundersGroteskCondensed.variable,
           fontHankenGrotesk.variable,
           fontInter.variable
@@ -62,10 +63,12 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <GsapProvider>
-            {/* <Header /> */}
-            {children}
-            {/* <Footer /> */}
-            <TailwindIndicator />
+            <LocomotiveProvider>
+              {/* <Header /> */}
+              {children}
+              {/* <Footer /> */}
+              <TailwindIndicator />
+            </LocomotiveProvider>
           </GsapProvider>
         </ThemeProvider>
       </body>

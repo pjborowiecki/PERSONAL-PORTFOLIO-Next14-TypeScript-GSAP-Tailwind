@@ -44,6 +44,9 @@ dependencies:
   gsap:
     specifier: ^3.12.2
     version: 3.12.2
+  locomotive-scroll:
+    specifier: 5.0.0-beta.8
+    version: 5.0.0-beta.8
   lucide-react:
     specifier: ^0.279.0
     version: 0.279.0(react@18.2.0)
@@ -2206,6 +2209,10 @@ packages:
     dependencies:
       domhandler: 5.0.3
       selderee: 0.10.0
+    dev: false
+
+  /@studio-freight/lenis@1.0.12:
+    resolution: {integrity: sha512-iN3JQ6qJVc+L7vh8NjlDibw9dvjjifvlJ+s0UAkfwty+vW9MJxRfszb5X/eAhcbDLZW6MlvjRHoH9WSQH3J8eA==}
     dev: false
 
   /@swc/helpers@0.5.2:
@@ -5473,6 +5480,13 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       p-locate: 5.0.0
+
+  /locomotive-scroll@5.0.0-beta.8:
+    resolution: {integrity: sha512-4Nq12voKr5719aaySZg3FX/gQKQIAaAC4NkBiU27aKEKFnYcTeOB1r8VO5bGpEIOGQo94wsiJQNZuRb3TsxjHA==}
+    engines: {node: '>=17'}
+    dependencies:
+      '@studio-freight/lenis': 1.0.12
+    dev: false
 
   /lodash.castarray@4.4.0:
     resolution: {integrity: sha512-aVx8ztPv7/2ULbArGJ2Y42bG1mEQ5mGjpdvrbJcJFU3TbYybe+QlLS4pst9zV52ymy2in1KpFPiZnAOATxD4+Q==}
