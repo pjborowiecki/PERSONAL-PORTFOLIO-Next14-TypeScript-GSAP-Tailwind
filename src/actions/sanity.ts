@@ -38,6 +38,7 @@ export const getProjectsAction = async (params: GetProjectsActionParams) => {
     )
 
     return projects
+    revalidatePath("/")
   } catch (error) {
     console.log(error)
   }

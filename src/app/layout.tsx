@@ -12,7 +12,6 @@ import {
 } from "@/config/fonts"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
-import { Footer } from "@/components/nav/footer"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 
 export const viewport: Viewport = {
