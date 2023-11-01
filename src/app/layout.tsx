@@ -4,9 +4,10 @@ import { type Metadata, type Viewport } from "next"
 import { GsapProvider } from "@/providers/gsap-provider"
 import { LocomotiveProvider } from "@/providers/locomotive-provider"
 import { ThemeProvider } from "@/providers/theme-provider"
-import { GeistMono, GeistSans } from "geist/font"
 
+import { fontGeistMono, fontGeistSans, fontHankenGrotesk } from "@/config/fonts"
 import { siteConfig } from "@/config/site"
+import { cn } from "@/lib/utils"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 
 export const viewport: Viewport = {
@@ -46,8 +47,15 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
   return (
-    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
-      <body className="min-h-screen bg-background antialiased">
+    <html lang="en">
+      <body
+        className={cn(
+          fontHankenGrotesk.variable,
+          fontGeistMono.variable,
+          fontGeistSans.variable,
+          "min-h-screen bg-background font-geistMono antialiased"
+        )}
+      >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <GsapProvider>
             <LocomotiveProvider>
