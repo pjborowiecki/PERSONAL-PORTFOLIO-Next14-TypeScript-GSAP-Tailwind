@@ -33,26 +33,25 @@ export function ProjectCard({
       className="group relative flex w-full flex-col gap-2 border-b border-newText-alt/40 bg-transparent px-[2rem] py-[8.53vw] text-newText-alt transition-all duration-300 ease-in-out after:absolute after:left-0 after:top-0 after:z-[-1] after:h-full after:w-full after:scale-y-0 after:bg-newDark-alt after:transition-all after:duration-300 after:ease-in-out after:content-[''] hover:after:scale-y-100"
     >
       <div className="grid w-full grid-cols-1 gap-2">
-        <h3 className="text-[5.3vw] font-bold uppercase leading-none tracking-normal text-white transition-all duration-200 ease-in-out">
+        <h3 className="text-[6.6vw] font-bold uppercase leading-none tracking-normal text-white transition-all duration-200 ease-in-out">
           {project.title}
         </h3>
 
-        <h4 className="text-[3.4vw] capitalize tracking-wide text-muted-foreground">
+        <h4 className="text-[4.4vw] capitalize tracking-wide text-muted-foreground">
           {project.shortDescription}
         </h4>
-
-        <div className="flex flex-wrap items-center gap-1">
-          {project.tech.map((item) => (
-            <div
-              key={item}
-              className="flex items-center justify-center border border-newText-alt px-2 py-[5px] text-[2.2vw] capitalize"
-            >
-              {item}
-            </div>
-          ))}
-        </div>
       </div>
-      <div></div>
+
+      <div className="mb-3 flex flex-wrap items-center gap-[5px]">
+        {project.tech.map((item) => (
+          <div
+            key={item}
+            className="flex items-center justify-center border border-newText-alt px-3 py-[5px] text-[2.8vw] capitalize"
+          >
+            {item}
+          </div>
+        ))}
+      </div>
 
       <div className="">
         <div className="flex items-center gap-4">
@@ -62,7 +61,7 @@ export function ProjectCard({
                   <Link
                     key={index}
                     href={value}
-                    className="text-[3.2vw] text-turquoise-base underline underline-offset-[6px]"
+                    className=" text-[3.8vw] text-turquoise-base underline-offset-[6px]"
                   >
                     {key.replace(/_/g, " ")}
                   </Link>

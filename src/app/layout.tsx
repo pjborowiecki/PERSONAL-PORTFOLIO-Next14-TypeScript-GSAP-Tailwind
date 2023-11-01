@@ -1,12 +1,12 @@
 import "@/styles/globals.css"
 
 import { type Metadata, type Viewport } from "next"
-import { GsapProvider } from "@/providers/gsap-provider"
-import { LocomotiveProvider } from "@/providers/locomotive-provider"
-import { ThemeProvider } from "@/providers/theme-provider"
 
 import { fontGeistMono, fontGeistSans, fontHankenGrotesk } from "@/config/fonts"
 import { siteConfig } from "@/config/site"
+import { GsapProvider } from "@/providers/gsap-provider"
+import { LocomotiveProvider } from "@/providers/locomotive-provider"
+import { ThemeProvider } from "@/providers/theme-provider"
 import { cn } from "@/lib/utils"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 
@@ -53,7 +53,7 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
           fontHankenGrotesk.variable,
           fontGeistMono.variable,
           fontGeistSans.variable,
-          "min-h-screen bg-background font-geistMono antialiased"
+          "min-h-screen bg-background font-geistSans antialiased"
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>

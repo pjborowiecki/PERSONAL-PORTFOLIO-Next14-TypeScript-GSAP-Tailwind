@@ -55,7 +55,7 @@ export function ProjectCategoryFilters() {
                 category.title === "all" && "hidden sm:flex"
               )}
             >
-              <Icon className="h-[4.6vw] w-[4.6vw]" aria-hidden="true" />
+              <Icon className="h-[6.1vw] w-[6.1vw]" aria-hidden="true" />
               <span>{category.title}</span>
             </Button>
           </li>

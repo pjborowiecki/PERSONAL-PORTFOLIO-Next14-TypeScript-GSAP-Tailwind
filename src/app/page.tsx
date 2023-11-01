@@ -8,7 +8,7 @@ import { IntroSection } from "@/components/sections/intro"
 import { ProjectsSection } from "@/components/sections/projects"
 import { ServicesSection } from "@/components/sections/services"
 
-// export const revalidate = 30
+export const revalidate = 60
 
 interface ProjectsSectionProps {
   searchParams: { [key: string]: string | undefined }
