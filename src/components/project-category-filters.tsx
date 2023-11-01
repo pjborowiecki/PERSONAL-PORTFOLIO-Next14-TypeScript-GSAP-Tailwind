@@ -46,7 +46,7 @@ export function ProjectCategoryFilters() {
             <Button
               onClick={() => handleFilter(category.title)}
               className={cn(
-                "flex items-center justify-center gap-4 whitespace-nowrap rounded-full border-2 border-newText-alt bg-transparent p-8 text-[26px] font-light capitalize text-newText-alt hover:border-newText-base hover:bg-newDark-alt hover:text-newText-base",
+                "",
                 active === category.title && "border-white text-white"
               )}
             >

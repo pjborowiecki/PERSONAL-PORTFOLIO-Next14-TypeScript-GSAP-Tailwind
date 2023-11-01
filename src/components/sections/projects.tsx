@@ -1,5 +1,8 @@
 import type { Project } from "@/types"
 
+import { ProjectCategoryFilters } from "../project-category-filters"
+import { ProjectList } from "../project-list"
+
 interface ProjectsSectionProps {
   projects: Project[]
 }
@@ -13,7 +16,24 @@ export function ProjectsSection({
       aria-label="projects-section"
       className="min-h-screen bg-newDark-base"
     >
-      Projects section
+      <div className="">
+        <div className="">
+          <div className="">
+            <h2 className="">Recent projects</h2>
+            <p className="">
+              Explore my portfolio to see what I have been working on lately.
+              From web and mobile development to the intricacies of deep
+              learning and beyond, each project represents a unique chapter in
+              my journey.
+            </p>
+          </div>
+          <div className="flex w-2/5 justify-end">
+            <ProjectCategoryFilters />
+          </div>
+        </div>
+
+        <ProjectList projects={projects} />
+      </div>
     </section>
   )
 }
