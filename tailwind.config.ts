@@ -12,9 +12,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        inter: ["var(--font-inter)"],
-        hankenGrotesk: ["var(--font-hanken-grotesk)"],
-        foundersGroteskCondensed: ["var(--font-founders-grotesk-condensed)"],
+        sans: ["var(--font-geist-sans)"],
+        mono: ["var(--font-geist-mono)"],
       },
       screens: {
         "w-1560": "1560px",

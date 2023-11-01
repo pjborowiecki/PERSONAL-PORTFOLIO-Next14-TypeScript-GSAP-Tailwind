@@ -11,7 +11,7 @@ export function ProjectsSection({
     <section
       id="projects-section"
       aria-label="projects-section"
-      className="min-h-screen"
+      className="min-h-screen bg-newDark-base"
     >
       Projects section
     </section>
