@@ -19,12 +19,12 @@
     "dev": "next dev --turbo --experimental-https",
     "build": "next build",
     "start": "next start",
+    "shadcn:add": "npx shadcn-ui@latest add",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "typecheck": "tsc --noEmit",
     "prettier:format": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
-    "prettier:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
-    "shadcn:add": "npx shadcn-ui@latest add"
+    "prettier:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",

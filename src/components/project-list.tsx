@@ -17,7 +17,7 @@ export function ProjectList({ projects }: ProjectListProps) {
   })
 
   return (
-    <div className="flex w-full flex-col">
+    <div className="w-full">
       {projects?.length > 0 ? (
         projects.map((project, index) => (
           <div key={project._id} className="">
@@ -29,9 +29,9 @@ export function ProjectList({ projects }: ProjectListProps) {
           </div>
         ))
       ) : (
-        <div className="flex items-center justify-center px-8 py-16">
-          <p className="text-center text-[24px] text-newText-base/60">
-            Nothing here yet. Please check back soon
+        <div className="w-full px-[2rem] py-[8.53vw]">
+          <p className="text-[4.025vw] leading-[170%] text-muted-foreground/50 md:text-[24px]">
+            Nothing here at the moment. <br /> Please check back soon.
           </p>
         </div>
       )}

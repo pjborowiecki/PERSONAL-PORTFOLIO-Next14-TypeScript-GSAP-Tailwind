@@ -37,21 +37,26 @@ export function ProjectCategoryFilters() {
   }
 
   return (
-    <ul className="flex max-w-[700px] flex-wrap items-center justify-end gap-4">
+    <ul className="flex flex-wrap items-center gap-x-2 gap-y-3 md:justify-end md:gap-4">
       {projectCategories.map((category) => {
-        const Icon = Icons[(category.icon as keyof typeof Icons) || "code"]
+        const Icon = Icons[category.icon as keyof typeof Icons]
 
         return (
-          <li key={category.title}>
+          <li
+            key={category.title}
+            className="flex h-full items-center justify-center"
+          >
             <Button
               onClick={() => handleFilter(category.title)}
+              variant="categoryTab"
+              size="tab"
               className={cn(
-                "",
-                active === category.title && "border-white text-white"
+                active === category.title && "border-white text-white",
+                category.title === "all" && "hidden sm:flex"
               )}
             >
-              <Icon className="h-6 w-6" aria-hidden="true" />
-              {category.title}
+              <Icon className="h-[4.6vw] w-[4.6vw]" aria-hidden="true" />
+              <span>{category.title}</span>
             </Button>
           </li>
         )

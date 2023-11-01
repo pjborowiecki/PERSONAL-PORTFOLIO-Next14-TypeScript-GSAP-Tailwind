@@ -4,9 +4,10 @@ import * as React from "react"
 import Image from "next/image"
 import { notFound } from "next/navigation"
 import { scalePreviewImageAnimation } from "@/animations/projects-section"
-import { GsapContext } from "@/providers/gsap-provider"
 import type { Project } from "@/types"
 import { motion } from "framer-motion"
+
+import { GsapContext } from "@/providers/gsap-provider"
 
 interface ProjectPreviewModalProps {
   projects: Project[]
@@ -33,6 +34,7 @@ export function ProjectPreviewModal({
       duration: 0.8,
       ease: "power3",
     })
+
     const yTo = gsap.quickTo(modalContainer.current, "top", {
       duration: 0.8,
       ease: "power3",
@@ -51,7 +53,8 @@ export function ProjectPreviewModal({
       variants={scalePreviewImageAnimation}
       initial="initial"
       animate={modalVisible ? "enter" : "leave"}
-      className="pointer-events-none absolute flex h-[300px] w-[400px] items-center justify-center overflow-hidden bg-white"
+      // TODO: on small devices, make it work on scroll to view instead of hover
+      className="pointer-events-none absolute hidden h-[300px] w-[400px] items-center justify-center overflow-hidden bg-white md:flex"
     >
       <div
         style={{ top: index * -100 + "%" }}
