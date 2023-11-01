@@ -30,7 +30,7 @@ export function ProjectList({ projects }: ProjectListProps) {
         ))
       ) : (
         <div className="w-full px-[2rem] py-[8.53vw]">
-          <p className="text-[4.6vw] leading-[170%] text-muted-foreground/50 md:text-[24px]">
+          <p className="text-[5.2vw] leading-[166%] text-muted-foreground/50 md:text-[24px]">
             Nothing here at the moment. <br /> Please check back soon.
           </p>
         </div>

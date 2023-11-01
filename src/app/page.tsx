@@ -8,7 +8,7 @@ import { IntroSection } from "@/components/sections/intro"
 import { ProjectsSection } from "@/components/sections/projects"
 import { ServicesSection } from "@/components/sections/services"
 
-export const revalidate = 60
+// export const revalidate = 60
 
 interface ProjectsSectionProps {
   searchParams: { [key: string]: string | undefined }
@@ -22,8 +22,6 @@ export default async function HomePage({
     category: searchParams?.category || "web dev",
     page: "1",
   })
-
-  // console.log(projects)
 
   if (!projects) {
     notFound()

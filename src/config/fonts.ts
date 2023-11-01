@@ -1,17 +1,11 @@
-import { Hanken_Grotesk } from "next/font/google"
-import localFont from "next/font/local"
+import { Hanken_Grotesk, Inter } from "next/font/google"
 
 export const fontHankenGrotesk = Hanken_Grotesk({
   subsets: ["latin"],
   variable: "--font-hanken-grotesk",
 })
 
-export const fontGeistMono = localFont({
-  src: "../../public/fonts/geist-mono.woff2",
-  variable: "--font-geist-mono",
-})
-
-export const fontGeistSans = localFont({
-  src: "../../public/fonts/geist-sans.woff2",
-  variable: "--font-geist-sans",
+export const fontInter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
 })

@@ -5,7 +5,7 @@ export const readClient = createClient({
   apiVersion,
   dataset,
   projectId,
-  useCdn: false,
+  useCdn,
 })
 
 export const writeClient = createClient({

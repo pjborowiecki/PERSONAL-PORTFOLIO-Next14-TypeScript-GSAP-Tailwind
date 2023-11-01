@@ -2,7 +2,7 @@ import "@/styles/globals.css"
 
 import { type Metadata, type Viewport } from "next"
 
-import { fontGeistMono, fontGeistSans, fontHankenGrotesk } from "@/config/fonts"
+import { fontHankenGrotesk, fontInter } from "@/config/fonts"
 import { siteConfig } from "@/config/site"
 import { GsapProvider } from "@/providers/gsap-provider"
 import { LocomotiveProvider } from "@/providers/locomotive-provider"
@@ -51,9 +51,8 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
       <body
         className={cn(
           fontHankenGrotesk.variable,
-          fontGeistMono.variable,
-          fontGeistSans.variable,
-          "min-h-screen bg-background font-geistSans antialiased"
+          fontInter.variable,
+          "min-h-screen bg-background font-hankenGrotesk antialiased"
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>

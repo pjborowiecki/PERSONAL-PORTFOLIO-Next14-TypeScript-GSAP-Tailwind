@@ -19,7 +19,7 @@ export function ProjectsSection({
       <div className="grid h-auto grid-cols-1 gap-[4.6vw] py-[24vw]">
         <div className="mx-[2rem] grid grid-cols-1 gap-[8.53vw]">
           <div className="grid grid-cols-1 gap-[12.8vw]">
-            <h2 className="font-hankenGrotesk text-[22.6vw] font-black leading-[86%] tracking-tight">
+            <h2 className="text-[22.6vw] font-black leading-[86%] tracking-tight">
               <span className="text-[26vw]">Recent</span> projects
             </h2>
             <p className="text-[6.1vw] leading-[166%] text-muted-foreground">
