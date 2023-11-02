@@ -61,7 +61,7 @@ export function ProjectCard({
                   <Link
                     key={index}
                     href={value}
-                    className=" text-[4vw] text-turquoise-base underline-offset-[6px]"
+                    className=" text-[4vw] text-turquoise-base underline decoration-turquoise-base/20 underline-offset-8"
                   >
                     {key.replace(/_/g, " ")}
                   </Link>

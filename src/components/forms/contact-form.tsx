@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { submitContactFormAction } from "@/actions/contact-form"
+import { submitContactForm } from "@/actions/contact-form"
 import { contactFormSchema } from "@/validations/contact-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
@@ -39,7 +39,7 @@ export function ContactForm(): JSX.Element {
   function onSubmit(data: FormInputs) {
     startTransition(async () => {
       try {
-        await submitContactFormAction(data)
+        await submitContactForm(data)
         toast.success("Thank you! Your message has been sent")
         form.reset()
       } catch (error) {
@@ -51,10 +51,10 @@ export function ContactForm(): JSX.Element {
   return (
     <Form {...form}>
       <form
-        className="grid w-full gap-[2rem]"
+        className="grid w-full gap-[8.6vw] md:gap-[2rem]"
         onSubmit={(...args) => void form.handleSubmit(onSubmit)(...args)}
       >
-        <div className="grid w-full grid-cols-2 gap-[3rem]">
+        <div className="grid w-full grid-cols-1 gap-[12.8vw] md:grid-cols-2 md:gap-[3rem]">
           <FormField
             control={form.control}
             name="name"
@@ -114,7 +114,7 @@ export function ContactForm(): JSX.Element {
               aria-hidden="true"
             />
           )}
-          {isPending ? "submitting" : "submit"}
+          {isPending ? "Sending..." : "Send"}
           <span className="sr-only">Submit contact form</span>
         </Button>
       </form>

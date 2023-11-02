@@ -14,9 +14,9 @@ export function ProjectsSection({
     <section
       id="projects-section"
       aria-label="projects-section"
-      className="mx-auto w-full max-w-[2560px]"
+      className="mx-auto w-full max-w-[2560px] pb-[12vw] pt-[24vw]"
     >
-      <div className="grid h-auto grid-cols-1 gap-[4.6vw] py-[24vw]">
+      <div className="grid h-auto grid-cols-1 gap-[4.6vw]">
         <div className="mx-[2rem] grid grid-cols-1 gap-[8.53vw]">
           <div className="grid grid-cols-1 gap-[12.8vw]">
             <h2 className="text-[22.6vw] font-black leading-[86%] tracking-tight">

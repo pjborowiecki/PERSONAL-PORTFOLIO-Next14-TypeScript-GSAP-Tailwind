@@ -1,6 +1,7 @@
 import "@/styles/globals.css"
 
 import { type Metadata, type Viewport } from "next"
+import { Toaster } from "sonner"
 
 import { fontHankenGrotesk, fontInter } from "@/config/fonts"
 import { siteConfig } from "@/config/site"
@@ -61,8 +62,8 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
             <LocomotiveProvider>
               <Header />
               {children}
-              {/* <Footer /> */}
               <TailwindIndicator />
+              <Toaster position="top-center" />
             </LocomotiveProvider>
           </GsapProvider>
         </ThemeProvider>

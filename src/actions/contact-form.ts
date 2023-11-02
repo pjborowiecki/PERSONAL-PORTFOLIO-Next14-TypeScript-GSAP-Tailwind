@@ -7,7 +7,7 @@ import type { z } from "zod"
 import { resend } from "@/config/resend"
 import { NewEnquiryEmail } from "@/components/emails/new-enquiry-email"
 
-export async function submitContactFormAction(
+export async function submitContactForm(
   input: z.infer<typeof contactFormSchema>
 ) {
   try {
@@ -24,6 +24,6 @@ export async function submitContactFormAction(
     })
   } catch (error) {
     console.error(error)
-    throw new Error("Something went wrong")
+    throw new Error("Something went wrong. Please try again")
   }
 }

@@ -106,6 +106,12 @@
   html {
     -webkit-tap-highlight-color: transparent;
   }
+
+  input,
+  input:-webkit-autofill,
+  input:autofill {
+    background: transparent;
+  }
 }
 
 @layer components {
@@ -137,17 +143,3 @@
     z-index: 1;
   }
 }
-
-/* .clip-path {
-  clip-path: path(
-    ""
-  );
-} */
-
-/* 
-  M - move to (x, y) E.g., M100,100
-  L - line to (x, y) E.g., L200,100
-
-
-
-*/
