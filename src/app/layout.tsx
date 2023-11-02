@@ -8,6 +8,7 @@ import { GsapProvider } from "@/providers/gsap-provider"
 import { LocomotiveProvider } from "@/providers/locomotive-provider"
 import { ThemeProvider } from "@/providers/theme-provider"
 import { cn } from "@/lib/utils"
+import { Header } from "@/components/nav/header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 
 export const viewport: Viewport = {
@@ -58,7 +59,7 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <GsapProvider>
             <LocomotiveProvider>
-              {/* <Header /> */}
+              <Header />
               {children}
               {/* <Footer /> */}
               <TailwindIndicator />

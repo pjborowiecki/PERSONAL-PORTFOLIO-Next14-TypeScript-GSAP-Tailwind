@@ -22,9 +22,7 @@ export function ProjectPreviewModal({
   projects,
 }: ProjectPreviewModalProps) {
   const { gsap } = React.useContext(GsapContext)
-  if (!gsap) {
-    notFound()
-  }
+  if (!gsap) notFound()
 
   const { modalVisible, index } = previewModal
   const modalContainer = React.useRef(null)
