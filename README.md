@@ -6,7 +6,7 @@ Personal portfolio website of Piotr Borowiecki - a recent Computer Science gradu
 
 ![public/screenshots/screenshot1](./public/screenshots/screenshot1.png)
 
-## Technologies Used
+## Tools and tech:
 
 - [TypeScript](https://www.typescriptlang.org/)
 - [Next.js 14](https://nextjs.org/docs/getting-started)

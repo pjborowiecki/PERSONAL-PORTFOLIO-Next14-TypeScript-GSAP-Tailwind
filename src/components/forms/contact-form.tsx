@@ -51,7 +51,7 @@ export function ContactForm(): JSX.Element {
   return (
     <Form {...form}>
       <form
-        className="grid w-full gap-[8.6vw] md:gap-[2rem]"
+        className="grid h-full w-full grid-cols-1 gap-[2rem]"
         onSubmit={(...args) => void form.handleSubmit(onSubmit)(...args)}
       >
         <div className="grid w-full grid-cols-1 gap-[12.8vw] md:grid-cols-2 md:gap-[3rem]">
@@ -98,7 +98,7 @@ export function ContactForm(): JSX.Element {
           control={form.control}
           name="message"
           render={({ field }) => (
-            <FormItem className="relative">
+            <FormItem className="relative 2xl:mt-[28px]">
               <FormControl>
                 <Textarea {...field} placeholder="Hi, I am looking to..." />
               </FormControl>
