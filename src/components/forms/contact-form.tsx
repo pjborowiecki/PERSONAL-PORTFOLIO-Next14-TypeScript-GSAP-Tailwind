@@ -55,7 +55,6 @@ export function ContactForm(): JSX.Element {
         onSubmit={(...args) => void form.handleSubmit(onSubmit)(...args)}
       >
         <div className="grid w-full grid-cols-2 gap-[3rem]">
-          {/* Name */}
           <FormField
             control={form.control}
             name="name"
@@ -75,7 +74,6 @@ export function ContactForm(): JSX.Element {
             )}
           />
 
-          {/* Email */}
           <FormField
             control={form.control}
             name="email"
@@ -96,7 +94,6 @@ export function ContactForm(): JSX.Element {
           />
         </div>
 
-        {/* Message */}
         <FormField
           control={form.control}
           name="message"

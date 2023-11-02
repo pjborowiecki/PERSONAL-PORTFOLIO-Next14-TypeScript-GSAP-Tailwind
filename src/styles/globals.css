@@ -102,6 +102,10 @@
   body {
     @apply w-full bg-background text-foreground;
   }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 
 @layer components {

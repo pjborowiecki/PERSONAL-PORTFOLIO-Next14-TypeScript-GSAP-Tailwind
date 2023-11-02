@@ -93,17 +93,20 @@ export function Header() {
       </nav>
 
       {/* "Hamburger" Button */}
-      <div ref={menuButton} className="fixed right-[2%] top-[2%] scale-0">
+      <div
+        ref={menuButton}
+        className="fixed right-[2%] top-[1%] z-[99] scale-0"
+      >
         <CircleButton
           onClick={() => setActive((value) => !value)}
-          className="relative m-5 flex h-20 w-20 cursor-pointer items-center justify-center rounded-full bg-secondary"
+          className="relative m-5 flex h-16 w-16 cursor-pointer items-center justify-center rounded-full bg-turquoise-base"
         >
           <div
             className={cn(
-              "relative z-[1] w-full before:relative before:top-[6px] before:m-auto before:block before:h-[1px] before:w-[40%] before:bg-secondary-foreground before:transition-transform before:duration-300 before:content-[''] after:relative after:top-[-6px] after:m-auto after:block after:h-[1px] after:w-[40%] after:bg-secondary-foreground after:transition-transform after:duration-300 after:content-['']",
+              "relative w-full before:relative before:top-[6px] before:m-auto before:block before:h-[1px] before:w-[40%] before:bg-newDark-alt2 before:transition-transform before:duration-300 before:content-[''] after:relative after:top-[-6px] after:m-auto after:block after:h-[1px] after:w-[40%] after:bg-newDark-alt2 after:transition-transform after:duration-300 after:content-['']",
               active && ""
             )}
-          ></div>
+          />
         </CircleButton>
       </div>
 

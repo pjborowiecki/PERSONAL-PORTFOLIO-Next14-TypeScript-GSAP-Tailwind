@@ -1,12 +1,12 @@
 import { notFound } from "next/navigation"
 import { getProjectsAction } from "@/actions/sanity"
 
-import { AboutSection } from "@/components/sections/about"
-import { ContactSection } from "@/components/sections/contact"
-import { HeroSection } from "@/components/sections/hero"
-import { IntroSection } from "@/components/sections/intro"
-import { ProjectsSection } from "@/components/sections/projects"
-import { ServicesSection } from "@/components/sections/services"
+import { AboutSection } from "@/components/sections/about/about-section"
+import { ContactSection } from "@/components/sections/contact/contact-section"
+import { HeroSection } from "@/components/sections/hero/hero-section"
+import { IntroSection } from "@/components/sections/intro/intro-section"
+import { ProjectsSection } from "@/components/sections/projects/projects-section"
+import { ServicesSection } from "@/components/sections/services/services-section"
 
 // export const revalidate = 60
 
