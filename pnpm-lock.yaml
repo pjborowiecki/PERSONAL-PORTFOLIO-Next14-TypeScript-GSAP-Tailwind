@@ -42,10 +42,10 @@ dependencies:
     specifier: ^3.12.2
     version: 3.12.2
   locomotive-scroll:
-    specifier: 4.1.4
-    version: 4.1.4
+    specifier: 5.0.0-beta.8
+    version: 5.0.0-beta.8
   next:
-    specifier: 14.0.1
+    specifier: ^14.0.1
     version: 14.0.1(@babel/core@7.23.2)(react-dom@18.2.0)(react@18.2.0)
   next-sanity:
     specifier: ^5.5.10
@@ -69,8 +69,8 @@ dependencies:
     specifier: ^7.47.0
     version: 7.47.0(react@18.2.0)
   resend:
-    specifier: ^2.0.0
-    version: 2.0.0
+    specifier: 1.1.0
+    version: 1.1.0
   sanity:
     specifier: ^3.19.0
     version: 3.19.0(@types/node@20.8.10)(@types/react@18.2.34)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.1.0)
@@ -103,9 +103,6 @@ devDependencies:
   '@types/eslint':
     specifier: ^8.44.6
     version: 8.44.6
-  '@types/locomotive-scroll':
-    specifier: ^4.1.2
-    version: 4.1.2
   '@types/node':
     specifier: 20.8.10
     version: 20.8.10
@@ -1808,6 +1805,16 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
+  /@react-email/render@0.0.7:
+    resolution: {integrity: sha512-hMMhxk6TpOcDC5qnKzXPVJoVGEwfm+U5bGOPH+MyTTlx0F02RLQygcATBKsbP7aI/mvkmBAZoFbgPIHop7ovug==}
+    engines: {node: '>=16.0.0'}
+    dependencies:
+      html-to-text: 9.0.3
+      pretty: 2.0.0
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
   /@react-email/render@0.0.9:
     resolution: {integrity: sha512-nrim7wiACnaXsGtL7GF6jp3Qmml8J6vAjAH88jkC8lIbfNZaCyuPQHANjyYIXlvQeAbsWADQJFZgOHUqFqjh/A==}
     engines: {node: '>=18.0.0'}
@@ -2226,6 +2233,10 @@ packages:
       selderee: 0.11.0
     dev: false
 
+  /@studio-freight/lenis@1.0.12:
+    resolution: {integrity: sha512-iN3JQ6qJVc+L7vh8NjlDibw9dvjjifvlJ+s0UAkfwty+vW9MJxRfszb5X/eAhcbDLZW6MlvjRHoH9WSQH3J8eA==}
+    dev: false
+
   /@swc/helpers@0.5.2:
     resolution: {integrity: sha512-E4KcWTpoLHqwPHLxidpOqQbcrZVgi0rsmmZXUle1jXmJfuIf/UWpczUJ7MZZ5tlxytgJXyp0w4PGkkeLiuIdZw==}
     dependencies:
@@ -2360,10 +2371,6 @@ packages:
 
   /@types/json5@0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
-    dev: true
-
-  /@types/locomotive-scroll@4.1.2:
-    resolution: {integrity: sha512-K4/YWVuLf+xW5lXPue8RdWAm96dVPlyn8ISqxGdK9QflLFy82cDsvpyHJchcKtfp+qNV9OZ11nq56T5oa8jogA==}
     dev: true
 
   /@types/lodash@4.14.200:
@@ -2931,10 +2938,6 @@ packages:
     resolution: {integrity: sha512-NzUnlZexiaH/46WDhANlyR2bXRopNg4F/zuSA3OpZnllCUgRaOF2znDioDWrmbNVsuZk6l9pMquQB38cfBZwkQ==}
     dev: false
 
-  /bezier-easing@2.1.0:
-    resolution: {integrity: sha512-gbIqZ/eslnUFC1tjEvtz0sgx+xTK20wDnYMIA27VA04R7w6xxXQPZDbibjA9DTWZRA2CXtwHykkVzlCaAJAZig==}
-    dev: false
-
   /big-integer@1.6.51:
     resolution: {integrity: sha512-GPEid2Y9QU1Exl1rpO9B2IPJGHPSupF5GnVIP0blYvNOMer2bTvSWs1jGOUg04hTmu67nmLsQ9TBo1puaotBHg==}
     engines: {node: '>=0.6'}
@@ -2949,10 +2952,6 @@ packages:
     dependencies:
       buffers: 0.1.1
       chainsaw: 0.1.0
-    dev: false
-
-  /bindall-standalone@1.0.5:
-    resolution: {integrity: sha512-HDI7YBWXVJk/eoGz+e4lYQQJnYp1ZHcUvAY71lVptLMhQnDm86vD73AGPw2qIlgYR3P0bjmoAcXiA8qhFejBhA==}
     dev: false
 
   /bl@4.1.0:
@@ -5404,10 +5403,6 @@ packages:
     resolution: {integrity: sha512-y+SqErxb8h7nE/fiEX07jsbuhrpO9lL8eca7/Y1nuWV2moNlXhyd59iDGcRf6moVyDMbmTNzL40SUyrFU/yDpg==}
     dev: false
 
-  /lethargy@1.0.9:
-    resolution: {integrity: sha512-nFM8blpCF9rqIL5mRAaTGc78W8oQixVtsD86jbEPvcI13+lDUYJf3R7DZQQL7tCiBpbGpGKMX2gwJFO9hiaOkg==}
-    dev: false
-
   /leven@3.1.0:
     resolution: {integrity: sha512-qsda+H8jTaUaN/x5vzW2rzc+8Rw4TAQ/4KjB46IwK5VH+IlVeeeje/EoZRpiXvIqjFgK84QffqPztGI3VBLG1A==}
     engines: {node: '>=6'}
@@ -5445,12 +5440,11 @@ packages:
     dependencies:
       p-locate: 5.0.0
 
-  /locomotive-scroll@4.1.4:
-    resolution: {integrity: sha512-6i98cFF2SKg6wIPpwVPuo2FG8qL3USsdDeew78TEYZyLoqleMWNfkSDpWA6mPym4dOfTIBXc678VmGlkgx3fTA==}
+  /locomotive-scroll@5.0.0-beta.8:
+    resolution: {integrity: sha512-4Nq12voKr5719aaySZg3FX/gQKQIAaAC4NkBiU27aKEKFnYcTeOB1r8VO5bGpEIOGQo94wsiJQNZuRb3TsxjHA==}
+    engines: {node: '>=17'}
     dependencies:
-      bezier-easing: 2.1.0
-      smoothscroll-polyfill: 0.4.4
-      virtual-scroll: 1.5.2
+      '@studio-freight/lenis': 1.0.12
     dev: false
 
   /lodash.castarray@4.4.0:
@@ -6664,11 +6658,12 @@ packages:
     resolution: {integrity: sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==}
     dev: false
 
-  /resend@2.0.0:
-    resolution: {integrity: sha512-jAh0DN84ZjjmzGM2vMjJ1hphPBg1mG98dzopF7kJzmin62v8ESg4og2iCKWdkAboGOT2SeO5exbr/8Xh8gLddw==}
+  /resend@1.1.0:
+    resolution: {integrity: sha512-it8TIDVT+/gAiJsUlv2tdHuvzwCCv4Zwu+udDqIm/dIuByQwe68TtFDcPccxqpSVVrNCBxxXLzsdT1tsV+P3GA==}
     engines: {node: '>=18'}
     dependencies:
-      '@react-email/render': 0.0.9
+      '@react-email/render': 0.0.7
+      type-fest: 3.13.0
     dev: false
 
   /resolve-from@4.0.0:
@@ -7093,10 +7088,6 @@ packages:
       tiny-warning: 1.0.3
     dev: false
 
-  /smoothscroll-polyfill@0.4.4:
-    resolution: {integrity: sha512-TK5ZA9U5RqCwMpfoMq/l1mrH0JAR7y7KRvOBx0n2869aLxch+gT9GhN3yUfjiw+d/DiF1mKo14+hd62JyMmoBg==}
-    dev: false
-
   /sonner@1.1.0(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-pqc5yd1ekS6dBXLKljRogqatiGJSxCaX8mspnqKjLg5Rzw6eiAUgsG1SS8RuQzOjQq8/MlgFao6sIw9doqAkNg==}
     peerDependencies:
@@ -7501,10 +7492,6 @@ packages:
       readable-stream: 3.6.2
     dev: false
 
-  /tiny-emitter@1.2.0:
-    resolution: {integrity: sha512-rWjF00inHeWtT5UbQYAXoMI4hL6TRMqohuKCsODyPYYmfAxqfMnXLsIeNrbdPEkNxlk++rojVilTnI9IVmEBtA==}
-    dev: false
-
   /tiny-invariant@1.0.6:
     resolution: {integrity: sha512-FOyLWWVjG+aC0UqG76V53yAWdXfH8bO6FNmyZOuUrzDzK8DI3/JRY25UD7+g49JWM1LXwymsKERB+DzI0dTEQA==}
     dev: false
@@ -7623,6 +7610,11 @@ packages:
   /type-fest@0.8.1:
     resolution: {integrity: sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==}
     engines: {node: '>=8'}
+    dev: false
+
+  /type-fest@3.13.0:
+    resolution: {integrity: sha512-Gur3yQGM9qiLNs0KPP7LPgeRbio2QTt4xXouobMCarR0/wyW3F+F/+OWwshg3NG0Adon7uQfSZBpB46NfhoF1A==}
+    engines: {node: '>=14.16'}
     dev: false
 
   /typed-array-buffer@1.0.0:
@@ -7839,15 +7831,6 @@ packages:
     dependencies:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
-    dev: false
-
-  /virtual-scroll@1.5.2:
-    resolution: {integrity: sha512-7jDHwlKbHUho7CYU/HojE/VKFH8GV9P5fVWP2HCa7dRUOpVvwl93OBOKIIcb2mKd+vqsbVR/0zl0X70+3sUZqA==}
-    dependencies:
-      bindall-standalone: 1.0.5
-      lethargy: 1.0.9
-      object-assign: 4.1.1
-      tiny-emitter: 1.2.0
     dev: false
 
   /vite@4.5.0(@types/node@20.8.10):
