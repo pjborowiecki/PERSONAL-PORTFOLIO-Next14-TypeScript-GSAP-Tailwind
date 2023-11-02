@@ -1,6 +1,5 @@
 {
   "private": true,
-  "type": "module",
   "name": "personal_portfolio_new_built_with_nextjs_and_shadcn",
   "description": "Personal portfolio website of Piotr Borowiecki - a recent Computer Science graduate from Durham University and an aspiring full-stack software developer. Built with TypeScript, Next.js 14, Sanity.io, Tailwind CSS, ShadCn-UI, and other fantastic tools.",
   "version": "0.0.1",
