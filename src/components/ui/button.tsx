@@ -21,12 +21,14 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         categoryTab:
           "whitespace-nowrap rounded-full border border-newText-alt bg-transparent text-[4.6vw] font-light leading-none text-newText-alt transition-colors hover:border-newText-base hover:bg-newDark-alt hover:text-newText-base md:border-2",
+        navbarIcon:
+          "m-0 p-1 transition-all duration-300 ease-in-out hover:bg-accent hover:text-accent-foreground",
       },
       size: {
         default: "h-9 px-4 py-2",
         sm: "h-8 rounded-md px-3 text-xs",
         lg: "h-10 rounded-md px-8",
-        icon: "h-9 w-9",
+        icon: "h-10 w-10",
         tab: "h-full w-full gap-1.5 px-5 py-2.5",
       },
     },

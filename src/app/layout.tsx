@@ -55,10 +55,10 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
         className={cn(
           fontHankenGrotesk.variable,
           fontInter.variable,
-          "flex w-full flex-col overflow-hidden bg-gradient-to-r from-newDark-base to-newDark-alt font-hankenGrotesk antialiased"
+          "flex w-full flex-col overflow-hidden bg-background font-hankenGrotesk antialiased"
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <GsapProvider>
             <LocomotiveProvider>
               <Header />
