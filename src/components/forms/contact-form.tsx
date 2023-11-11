@@ -5,11 +5,9 @@ import { submitContactForm } from "@/actions/contact-form"
 import { contactFormSchema } from "@/validations/contact-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
-import { toast } from "sonner"
 import type { z } from "zod"
 
-import { catchError } from "@/lib/utils"
-import { Icons } from "@/components/icons"
+import { useToast } from "@/hooks/use-toast"
 import { Button } from "@/components/ui/button"
 import {
   Form,
@@ -21,13 +19,15 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { Icons } from "@/components/icons"
 
-type FormInputs = z.infer<typeof contactFormSchema>
+type ContactFormInputs = z.infer<typeof contactFormSchema>
 
 export function ContactForm(): JSX.Element {
+  const { toast } = useToast()
   const [isPending, startTransition] = React.useTransition()
 
-  const form = useForm<FormInputs>({
+  const form = useForm<ContactFormInputs>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
       name: "",
@@ -36,14 +36,32 @@ export function ContactForm(): JSX.Element {
     },
   })
 
-  function onSubmit(data: FormInputs) {
+  function onSubmit(formData: ContactFormInputs) {
     startTransition(async () => {
       try {
-        await submitContactForm(data)
-        toast.success("Thank you! Your message has been sent")
+        const message = await submitContactForm(formData)
+
+        switch (message) {
+          case "success":
+            toast({
+              title: "Thank you!",
+              description: "Your message has been sent",
+            })
+            form.reset()
+            break
+          default:
+            toast({
+              title: "Something went wrong",
+              description: "Please try again",
+              variant: "destructive",
+            })
+        }
         form.reset()
       } catch (error) {
-        catchError(error)
+        toast({
+          description: "Something went wrong. Please try again",
+          variant: "destructive",
+        })
       }
     })
   }

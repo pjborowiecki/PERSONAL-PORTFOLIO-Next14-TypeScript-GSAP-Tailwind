@@ -11,7 +11,7 @@ export async function submitContactForm(
   input: z.infer<typeof contactFormSchema>
 ) {
   try {
-    await resend.emails.send({
+    const emailSent = await resend.emails.send({
       from: env.RESEND_EMAIL_FROM_ADDRESS,
       to: env.RESEND_EMAIL_TO_ADDRESS,
       reply_to: input.email,
@@ -22,6 +22,8 @@ export async function submitContactForm(
         message: input.message,
       }),
     })
+
+    return emailSent ? "success" : null
   } catch (error) {
     console.error(error)
     throw new Error("Something went wrong. Please try again")

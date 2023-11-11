@@ -28,13 +28,13 @@ export default async function HomePage({
   }
 
   return (
-    <main>
+    <div className="grid w-full grid-cols-1 items-center justify-center gap-16 md:gap-32">
       <HeroSection />
       <IntroSection />
       <AboutSection />
       <ServicesSection />
       <ProjectsSection projects={projects} />
       <ContactSection />
-    </main>
+    </div>
   )
 }

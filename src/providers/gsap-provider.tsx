@@ -18,7 +18,7 @@ interface GsapProviderProps {
 
 export const GsapProvider: React.FC<GsapProviderProps> = ({
   children,
-}: GsapProviderProps) => {
+}: GsapProviderProps): JSX.Element => {
   const [isReady, setIsReady] = React.useState(false)
 
   const useIsomorphicLayoutEffect =

@@ -27,14 +27,13 @@
     }
   },
   "include": [
-    ".eslintrc.cjs",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "**/*.cjs",
     "**/*.mjs",
     ".next/types/**/*.ts",
-    "next.config.mjs",
+    "next.config.cjs",
     "sanity.config.ts",
     "sanity.cli.ts"
   ],

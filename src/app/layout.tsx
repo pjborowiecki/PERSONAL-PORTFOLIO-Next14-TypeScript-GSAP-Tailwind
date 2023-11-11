@@ -1,7 +1,7 @@
 import "@/styles/globals.css"
 
 import { type Metadata, type Viewport } from "next"
-import { Toaster } from "sonner"
+import { Analytics } from "@vercel/analytics/react"
 
 import { fontHankenGrotesk, fontInter } from "@/config/fonts"
 import { siteConfig } from "@/config/site"
@@ -9,6 +9,7 @@ import { GsapProvider } from "@/providers/gsap-provider"
 import { LocomotiveProvider } from "@/providers/locomotive-provider"
 import { ThemeProvider } from "@/providers/theme-provider"
 import { cn } from "@/lib/utils"
+import { Toaster } from "@/components/ui/toaster"
 import { Header } from "@/components/nav/header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 
@@ -54,16 +55,17 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
         className={cn(
           fontHankenGrotesk.variable,
           fontInter.variable,
-          "min-h-screen bg-background font-hankenGrotesk antialiased"
+          "flex w-full flex-col overflow-hidden bg-gradient-to-r from-newDark-base to-newDark-alt font-hankenGrotesk antialiased"
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <GsapProvider>
             <LocomotiveProvider>
               <Header />
-              {children}
+              <main className="flex-1">{children}</main>
+              <Toaster />
+              <Analytics />
               <TailwindIndicator />
-              <Toaster position="top-center" />
             </LocomotiveProvider>
           </GsapProvider>
         </ThemeProvider>

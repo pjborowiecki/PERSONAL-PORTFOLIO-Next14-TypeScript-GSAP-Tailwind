@@ -9,7 +9,9 @@ export function useLocomotiveScroll() {
   return React.useContext(LocomotiveContext)
 }
 
-export function LocomotiveProvider({ children }: React.PropsWithChildren) {
+export function LocomotiveProvider({
+  children,
+}: React.PropsWithChildren): JSX.Element {
   React.useEffect(() => {
     let scroll: LocomotiveScroll | null = null
 

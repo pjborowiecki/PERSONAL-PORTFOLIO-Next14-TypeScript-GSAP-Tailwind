@@ -8,8 +8,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { siteConfig } from "@/config/site"
 import { GsapContext } from "@/providers/gsap-provider"
 import { cn } from "@/lib/utils"
-import { CircleButton } from "@/components/circle-button"
 import { Button } from "@/components/ui/button"
+import { CircleButton } from "@/components/circle-button"
 
 export function Header() {
   const { gsap } = React.useContext(GsapContext)

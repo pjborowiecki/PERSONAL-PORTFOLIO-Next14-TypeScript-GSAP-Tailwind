@@ -2,11 +2,11 @@
 
 import * as React from "react"
 import { useRouter, useSearchParams } from "next/navigation"
-import { projectCategories } from "@/data/constants"
 
+import { projectCategories } from "@/data/constants"
 import { cn, formUrlQuery } from "@/lib/utils"
-import { Icons } from "@/components/icons"
 import { Button } from "@/components/ui/button"
+import { Icons } from "@/components/icons"
 
 export function ProjectCategoryFilters() {
   const [active, setActive] = React.useState("web dev")

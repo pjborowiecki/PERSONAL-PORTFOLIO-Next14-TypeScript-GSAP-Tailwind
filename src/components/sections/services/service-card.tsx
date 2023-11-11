@@ -1,3 +1,3 @@
-export function ServiceCard() {
+export function ServiceCard(): JSX.Element {
   return <div>Service Card</div>
 }

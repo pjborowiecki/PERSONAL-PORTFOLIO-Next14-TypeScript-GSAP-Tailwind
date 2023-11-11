@@ -1,0 +1,32 @@
+import("./src/env.mjs")
+
+/** @type {import("next").NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  experimental: {
+    webpackBuildWorker: true,
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+      },
+      {
+        protocol: "https",
+        hostname: "lh3.googleusercontent.com",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+        pathname: "/images/**",
+      },
+      {
+        protocol: "https",
+        hostname: "uploadthing.com",
+      },
+    ],
+  },
+}
+
+export default nextConfig

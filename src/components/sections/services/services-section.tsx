@@ -1,11 +1,15 @@
-export function ServicesSection() {
+export function ServicesSection(): JSX.Element {
   return (
     <section
       id="services-section"
       aria-label="services-section"
-      className="min-h-screen"
+      className="w-full"
     >
-      Services section
+      <div className="container flex flex-col items-center justify-center gap-8 md:gap-16">
+        <h2 className="font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+          Services section
+        </h2>
+      </div>
     </section>
   )
 }
