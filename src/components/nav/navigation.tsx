@@ -19,7 +19,7 @@ interface NavigationProps {
 
 export function Navigation({ navItems }: NavigationProps): JSX.Element {
   return (
-    <NavigationMenu className="hidden transition-all duration-300 ease-in-out sm:flex">
+    <NavigationMenu className="hidden transition-all duration-300 ease-in-out md:flex">
       <NavigationMenuList>
         {navItems.map((item) => (
           <NavigationMenuItem key={item.title} asChild>

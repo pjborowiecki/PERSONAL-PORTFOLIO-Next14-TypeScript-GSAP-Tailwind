@@ -1,51 +1,23 @@
-import type { BuildQueryParams, UrlQueryParams } from "@/types"
+import { env } from "@/env.mjs"
 import { clsx, type ClassValue } from "clsx"
-import qs from "query-string"
 import { twMerge } from "tailwind-merge"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export function buildQuery(params: BuildQueryParams) {
-  const { type, query, category, page = 1, perPage = 20 } = params
-
-  const conditions = [`*[_type=="${type}"`]
-
-  if (query) conditions.push(`title match "*${query}*"`)
-
-  if (category && category !== "all") {
-    conditions.push(`category == "${category}"`)
-  }
-
-  const offset = (page - 1) * perPage
-  const limit = perPage
-
-  return conditions.length > 1
-    ? `${conditions[0]} && (${conditions
-        .slice(1)
-        .join(" && ")})][${offset}...${limit}]`
-    : `${conditions[0]}][${offset}...${limit}]`
+export function formatDate(date: Date | string | number) {
+  return new Intl.DateTimeFormat("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  }).format(new Date(date))
 }
 
-export function formUrlQuery({
-  params,
-  key,
-  value,
-  keysToRemove,
-}: UrlQueryParams) {
-  const currentUrl = qs.parse(params)
+export function absoluteUrl(path: string) {
+  return `${env.NEXT_PUBLIC_APP_URL}${path}`
+}
 
-  if (keysToRemove) {
-    keysToRemove.forEach((keyToRemove) => {
-      delete currentUrl[keyToRemove]
-    })
-  } else if (key && value) {
-    currentUrl[key] = value
-  }
-
-  return qs.stringifyUrl(
-    { url: window.location.pathname, query: currentUrl },
-    { skipNull: true }
-  )
+export function truncate(str: string, length: number) {
+  return str.length > length ? `${str.substring(0, length)}...` : str
 }

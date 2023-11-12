@@ -1,16 +1,17 @@
 import "@/styles/globals.css"
+import "@/styles/mdx.css"
 
-import { type Metadata, type Viewport } from "next"
+import * as React from "react"
+import type { Metadata, Viewport } from "next"
+import { env } from "@/env.mjs"
 import { Analytics } from "@vercel/analytics/react"
 
-import { fontHankenGrotesk, fontInter } from "@/config/fonts"
+import { fontHeading, fontInter, fontUrbanist } from "@/config/fonts"
 import { siteConfig } from "@/config/site"
-import { GsapProvider } from "@/providers/gsap-provider"
-import { LocomotiveProvider } from "@/providers/locomotive-provider"
+import { SmoothScrollProvider } from "@/providers/smooth-scroll-provider"
 import { ThemeProvider } from "@/providers/theme-provider"
 import { cn } from "@/lib/utils"
 import { Toaster } from "@/components/ui/toaster"
-import { Header } from "@/components/nav/header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 
 export const viewport: Viewport = {
@@ -25,23 +26,44 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
   title: {
-    default: siteConfig.nameLong,
-    template: `%s - ${siteConfig.nameLong}`,
+    default: siteConfig.name,
+    template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  creator: siteConfig.author,
   authors: [
     {
       name: siteConfig.author,
-      url: siteConfig.links.github,
+      url: siteConfig.links.authorsWebsite,
     },
   ],
+  creator: siteConfig.author,
+  keywords: siteConfig.keywords,
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteConfig.url,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [siteConfig.links.openGraphImage],
+    creator: siteConfig.author,
+  },
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
   },
+  // manifest: siteConfig.links.manifestFile,
 }
 
 interface RootLayoutProps {
@@ -53,21 +75,24 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
     <html lang="en">
       <body
         className={cn(
-          fontHankenGrotesk.variable,
+          "w-full bg-background font-urbanist antialiased",
           fontInter.variable,
-          "flex w-full flex-col overflow-hidden bg-background font-hankenGrotesk antialiased"
+          fontUrbanist.variable,
+          fontHeading.variable
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          <GsapProvider>
-            <LocomotiveProvider>
-              <Header />
-              <main className="flex-1">{children}</main>
-              <Toaster />
-              <Analytics />
-              <TailwindIndicator />
-            </LocomotiveProvider>
-          </GsapProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <SmoothScrollProvider>
+            {children}
+            <Toaster />
+            <Analytics />
+            <TailwindIndicator />
+          </SmoothScrollProvider>
         </ThemeProvider>
       </body>
     </html>

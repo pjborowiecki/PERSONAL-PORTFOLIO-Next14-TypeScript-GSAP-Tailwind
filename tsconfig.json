@@ -4,6 +4,7 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -14,7 +15,6 @@
     "jsx": "preserve",
     "incremental": true,
     "noUncheckedIndexedAccess": true,
-    "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "plugins": [
       {
@@ -23,7 +23,7 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@/sanity/*": ["./sanity/*"]
+      "contentlayer/generated": ["./.contentlayer/generated"]
     }
   },
   "include": [
@@ -33,9 +33,9 @@
     "**/*.cjs",
     "**/*.mjs",
     ".next/types/**/*.ts",
+    ".contentlayer/generated",
     "next.config.cjs",
-    "sanity.config.ts",
-    "sanity.cli.ts"
+    ".eslintrc.cjs"
   ],
   "exclude": ["node_modules"]
 }

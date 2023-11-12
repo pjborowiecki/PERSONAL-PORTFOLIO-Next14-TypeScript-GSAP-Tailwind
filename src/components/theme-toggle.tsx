@@ -10,7 +10,7 @@ export function ThemeToggle(): JSX.Element {
 
   return (
     <Button
-      variant="ghost"
+      variant="navbarIcon"
       size="icon"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >

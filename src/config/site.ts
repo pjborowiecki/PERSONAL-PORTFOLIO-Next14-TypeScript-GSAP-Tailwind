@@ -1,18 +1,25 @@
-export type SiteConfig = typeof siteConfig
+import { type NavItem, type NavItemFooter } from "@/types"
 
 const links = {
   github:
-    "https://github.com/pjborowiecki/PERSONAL-PORTFOLIO-Next14-Sanity-TypeScript-GSAP-Tailwind",
+    "https://github.com/pjborowiecki/SAASY-LAND-Next-14-Starters-With-Authentication-And-Database-Implemented",
   twitter: "https://twitter.com/pjborowiecki",
   linkedin: "https://www.linkedin.com/in/pjborowiecki",
+  discord: "",
+  authorsWebsite: "https://pjborowiecki.com",
+  authorsGitHub: "https://github.com/pjborowiecki",
+  openGraphImage: "https://pjborowiecki.com/opengraph-image.png",
+  manifestFile: "https://pjborowiecki.com/site.webmanifest",
 }
 
 export const siteConfig = {
-  nameShort: "P J Borowiecki",
+  name: "P J Borowiecki",
   nameLong: "Piotr J Borowiecki - Full-Stack Developer",
   description:
     "A personal portfolio website of Piotr J Borowiecki, a recent Computer Science graduate from Durham University and an aspiring software developer.",
   links,
+  url: "https://saasyland.com",
+  ogImage: links.openGraphImage,
   author: "@pjborowiecki",
   hostingRegion: "fra1",
   keywords: [
@@ -50,5 +57,7 @@ export const siteConfig = {
       title: "blog",
       href: "/blog",
     },
-  ],
+  ] satisfies NavItem[],
+  navItemsMobile: [],
+  navItemsFooter: [] satisfies NavItemFooter[],
 }

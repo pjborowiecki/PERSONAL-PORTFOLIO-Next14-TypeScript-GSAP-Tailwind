@@ -20,11 +20,13 @@ const config = {
       },
     ],
     "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
+    "@next/next/no-img-element": "off",
   },
   settings: {
     tailwindcss: {
-      callees: ["cn"],
+      callees: ["cn", "cva"],
       config: "./tailwind.config.ts",
+      classRegex: "^(class(Name)?|tw)$",
     },
     next: {
       rootDir: ["./"],

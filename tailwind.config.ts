@@ -1,22 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  content: ["./src/**/*.{js,ts,jsx,tsx}", "./src/content/**/*.{md,mdx}"],
   darkMode: ["class"],
-  content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   theme: {
     container: {
       center: true,
-      padding: "2rem lg:3rem",
+      padding: "2rem",
       screens: {
-        "2xl": "1600px",
+        "2xl": "1400px",
       },
     },
     extend: {
       fontFamily: {
         inter: ["var(--font-inter)"],
-        hankenGrotesk: ["var(--font-hanken-grotesk)"],
-      },
-      screens: {
-        "w-1560": "1560px",
+        urbanist: ["var(--font-urbanist)"],
+        heading: ["var(--font-heading)"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -52,63 +53,11 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        violet: {
-          base: "hsl(var(--violet-base))",
-          alt: "hsl(var(--violet-alt))",
-        },
-        yellow: {
-          base: "hsl(var(--yellow-base))",
-          alt: "hsl(var(--yellow-alt))",
-        },
-        blue: {
-          base: "hsl(var(--blue-base))",
-          alt: "hsl(var(--blue-alt))",
-        },
-        cyan: {
-          base: "hsl(var(--cyan-base))",
-          alt: "hsl(var(--cyan-alt))",
-        },
-        green: {
-          base: "hsl(var(--green-base))",
-          alt: "hsl(var(--green-alt))",
-        },
-        turquoise: {
-          base: "hsl(var(--turquoise-base))",
-          alt: "hsl(var(--turquoise-alt))",
-        },
-        pink: {
-          base: "hsl(var(--pink-base))",
-          alt: "hsl(var(--pink-alt))",
-        },
-        dark: {
-          base: "hsl(var(--dark-base))",
-          alt: "hsl(var(--dark-alt))",
-        },
-        newDark: {
-          base: "hsl(var(--new-dark-base))",
-          alt: "hsl(var(--new-dark-alt))",
-          alt2: "hsl(var(--new-dark-alt2))",
-          alt3: "hsl(var(--new-dark-alt3))",
-        },
-        newText: {
-          base: "hsl(var(--new-text-base))",
-          alt: "hsl(var(--new-text-alt))",
-        },
-        newAccent: {
-          base: "hsl(var(--new-accent-base))",
-          alt: "hsl(var(--new-accent-alt))",
-        },
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
+        lg: `var(--radius)`,
+        md: `calc(var(--radius) - 2px)`,
         sm: "calc(var(--radius) - 4px)",
-      },
-      rotate: {
-        135: "135deg",
-      },
-      transitionDuration: {
-        "1000": "1000ms",
       },
       keyframes: {
         "accordion-down": {
@@ -119,15 +68,62 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
         },
-        marquee: {
-          "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-50%)" },
+        "fade-up": {
+          "0%": {
+            opacity: 0,
+            transform: "translateY(10px)",
+          },
+          "80%": {
+            opacity: 0.7,
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateY(0px)",
+          },
+        },
+        "fade-down": {
+          "0%": {
+            opacity: 0,
+            transform: "translateY(-10px)",
+          },
+          "80%": {
+            opacity: 0.6,
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateY(0px)",
+          },
+        },
+        "fade-in": {
+          "0%": {
+            opacity: 0,
+          },
+          "50%": {
+            opacity: 0.6,
+          },
+          "100%": {
+            opacity: 1,
+          },
+        },
+        "fade-out": {
+          "0%": {
+            opacity: 0,
+          },
+          "50%": {
+            opacity: 0.6,
+          },
+          "100%": {
+            opacity: 1,
+          },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        marquee: "marquee 30s linear infinite",
+        "fade-up": "fade-up 0.5s",
+        "fade-down": "fade-down 0.5s",
+        "fade-in": "fade-in 0.4s",
+        "fade-out": "fade-out 0.4s",
       },
     },
   },

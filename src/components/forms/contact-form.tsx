@@ -1,8 +1,8 @@
 "use client"
 
 import * as React from "react"
-import { submitContactForm } from "@/actions/contact-form"
-import { contactFormSchema } from "@/validations/contact-form"
+import { submitContactForm } from "@/actions/email"
+import { contactFormSchema } from "@/validations/email"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import type { z } from "zod"
@@ -36,7 +36,7 @@ export function ContactForm(): JSX.Element {
     },
   })
 
-  function onSubmit(formData: ContactFormInputs) {
+  function onSubmit(formData: ContactFormInputs): void {
     startTransition(async () => {
       try {
         const message = await submitContactForm(formData)
@@ -56,7 +56,6 @@ export function ContactForm(): JSX.Element {
               variant: "destructive",
             })
         }
-        form.reset()
       } catch (error) {
         toast({
           description: "Something went wrong. Please try again",
@@ -69,25 +68,21 @@ export function ContactForm(): JSX.Element {
   return (
     <Form {...form}>
       <form
-        className="grid h-full w-full grid-cols-1 gap-[2rem]"
+        className="grid w-full gap-8"
         onSubmit={(...args) => void form.handleSubmit(onSubmit)(...args)}
       >
-        <div className="grid w-full grid-cols-1 gap-[12.8vw] md:grid-cols-2 md:gap-[3rem]">
+        <div className="grid w-full gap-8 md:grid-cols-2 md:gap-4">
           <FormField
             control={form.control}
             name="name"
             render={({ field }) => (
-              <FormItem className="relative">
-                <FormControl>
-                  <Input
-                    type="text"
-                    autoComplete="off"
-                    placeholder="John"
-                    {...field}
-                  />
+              <FormItem>
+                <FormLabel>Name</FormLabel>
+
+                <FormControl className="h-12">
+                  <Input type="text" placeholder="John" {...field} />
                 </FormControl>
-                <FormLabel>name</FormLabel>
-                <FormMessage />
+                <FormMessage className="pt-2 sm:text-sm" />
               </FormItem>
             )}
           />
@@ -96,17 +91,12 @@ export function ContactForm(): JSX.Element {
             control={form.control}
             name="email"
             render={({ field }) => (
-              <FormItem className="relative">
-                <FormControl>
-                  <Input
-                    type="email"
-                    autoComplete="off"
-                    placeholder="john@smith.com"
-                    {...field}
-                  />
+              <FormItem>
+                <FormLabel>Email</FormLabel>
+                <FormControl className="h-12">
+                  <Input type="email" placeholder="john@smith.com" {...field} />
                 </FormControl>
-                <FormLabel>email</FormLabel>
-                <FormMessage />
+                <FormMessage className="pt-2 sm:text-sm" />
               </FormItem>
             )}
           />
@@ -116,16 +106,24 @@ export function ContactForm(): JSX.Element {
           control={form.control}
           name="message"
           render={({ field }) => (
-            <FormItem className="relative 2xl:mt-[28px]">
-              <FormControl>
-                <Textarea {...field} placeholder="Hi, I am looking to..." />
+            <FormItem className="">
+              <FormLabel>Message</FormLabel>
+              <FormControl className="min-h-[180px] md:min-h-[240px]">
+                <Textarea
+                  {...field}
+                  placeholder="Hi, I am looking to..."
+                  className="text-base"
+                />
               </FormControl>
-              <FormMessage />
+              <FormMessage className="pt-2 sm:text-sm" />
             </FormItem>
           )}
         />
 
-        <Button className="h-14 rounded-lg bg-gradient-to-br from-turquoise-base to-turquoise-alt text-[1.3rem] font-semibold leading-none ">
+        <Button
+          variant="outline"
+          className="h-14 border bg-gradient-to-br from-pink-600/70 to-purple-400/70 text-lg font-bold tracking-wide hover:opacity-70"
+        >
           {isPending && (
             <Icons.spinner
               className="mr-2 h-4 w-4 animate-spin"
