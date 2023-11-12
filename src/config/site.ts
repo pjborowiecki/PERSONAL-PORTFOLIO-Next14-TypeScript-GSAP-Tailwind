@@ -41,22 +41,22 @@ export const siteConfig = {
     "Blockchain developer",
   ],
   navItems: [
-    {
-      title: "about",
-      href: "#about",
-    },
-    {
-      title: "services",
-      href: "#services",
-    },
+    // {
+    //   title: "about",
+    //   href: "#about",
+    // },
+    // {
+    //   title: "services",
+    //   href: "#services",
+    // },
     {
       title: "projects",
       href: "#projects",
     },
-    {
-      title: "blog",
-      href: "/blog",
-    },
+    // {
+    //   title: "blog",
+    //   href: "/blog",
+    // },
   ] satisfies NavItem[],
   navItemsMobile: [],
   navItemsFooter: [] satisfies NavItemFooter[],

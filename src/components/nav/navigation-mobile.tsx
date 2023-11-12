@@ -52,7 +52,7 @@ export function NavigationMobile({ navItems }: NavigationMobileProps) {
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild className="transition-all duration-300 ease-in-out">
         <Button variant="navbarIcon" size="icon" className="md:hidden">
-          <Icons.menuToggle className="h-5 w-5" aria-hidden="true" />
+          <Icons.menuToggle className="h-8 w-8" aria-hidden="true" />
           <span className="sr-only">Toggle Menu</span>
         </Button>
       </SheetTrigger>

@@ -20,12 +20,15 @@ interface NavigationProps {
 export function Navigation({ navItems }: NavigationProps): JSX.Element {
   return (
     <NavigationMenu className="hidden transition-all duration-300 ease-in-out md:flex">
-      <NavigationMenuList>
+      <NavigationMenuList className="space-x-0">
         {navItems.map((item) => (
           <NavigationMenuItem key={item.title} asChild>
             <Link href={item.href} legacyBehavior passHref>
               <NavigationMenuLink
-                className={cn(navigationMenuTriggerStyle(), "bg-transparent")}
+                className={cn(
+                  navigationMenuTriggerStyle(),
+                  "rounded-full bg-transparent px-6 py-4 text-base tracking-wide hover:bg-foreground hover:text-background"
+                )}
               >
                 {item.title}
               </NavigationMenuLink>

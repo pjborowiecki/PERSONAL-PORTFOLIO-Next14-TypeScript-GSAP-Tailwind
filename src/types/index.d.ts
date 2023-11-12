@@ -18,3 +18,23 @@ export interface BlogPostParamsProps {
     slug: string[]
   }
 }
+
+export interface Category {
+  title: string
+}
+
+export interface ProjectLinks {
+  source_code?: string
+  live_demo?: string
+  details?: string
+}
+
+export interface Project {
+  title: string
+  description: string
+  categories: string[]
+  image: string
+  stack: string[]
+  links: ProjectLinks
+  priority: number
+}
