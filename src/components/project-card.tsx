@@ -55,14 +55,14 @@ export function ProjectCard({
       </div>
 
       <div className="flex items-center gap-8 md:pr-6">
-        <div className="flex h-full items-end gap-6 md:pl-4">
+        <div className="flex h-full items-end gap-3 md:gap-6 md:pl-4">
           {project.links
             ? Object.entries(project.links).map(([key, value], index) =>
                 value !== null ? (
                   <Link
                     key={index}
                     href={value as string}
-                    className="flex items-center gap-6 text-sm font-medium capitalize underline-offset-8 after:inline-flex after:h-2 after:w-2 after:rounded-full after:bg-foreground after:content-[''] last-of-type:after:hidden md:text-base md:hover:underline md:group-hover:text-background md:group-hover:after:bg-background"
+                    className="flex items-center gap-3 whitespace-nowrap text-sm font-medium underline-offset-8 after:inline-flex after:h-1 after:w-1 after:rounded-full after:bg-foreground after:content-[''] last-of-type:after:hidden sm:after:h-2 sm:after:w-2 md:gap-6 md:text-base md:hover:underline md:group-hover:text-background md:group-hover:after:bg-background"
                   >
                     {key.replace(/_/g, " ")}
                   </Link>
