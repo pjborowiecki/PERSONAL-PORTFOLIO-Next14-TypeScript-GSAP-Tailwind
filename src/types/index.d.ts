@@ -21,6 +21,7 @@ export interface BlogPostParamsProps {
 
 export interface Category {
   title: string
+  icon: string
 }
 
 export interface ProjectLinks {

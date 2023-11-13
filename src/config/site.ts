@@ -2,7 +2,7 @@ import { type NavItem, type NavItemFooter } from "@/types"
 
 const links = {
   github:
-    "https://github.com/pjborowiecki/SAASY-LAND-Next-14-Starters-With-Authentication-And-Database-Implemented",
+    "https://github.com/pjborowiecki/PERSONAL-PORTFOLIO-Next14-TypeScript-GSAP-Tailwind",
   twitter: "https://twitter.com/pjborowiecki",
   linkedin: "https://www.linkedin.com/in/pjborowiecki",
   discord: "",
@@ -18,7 +18,7 @@ export const siteConfig = {
   description:
     "A personal portfolio website of Piotr J Borowiecki, a recent Computer Science graduate from Durham University and an aspiring software developer.",
   links,
-  url: "https://saasyland.com",
+  url: "https://pjborowiecki.com",
   ogImage: links.openGraphImage,
   author: "@pjborowiecki",
   hostingRegion: "fra1",
@@ -51,7 +51,7 @@ export const siteConfig = {
     // },
     {
       title: "projects",
-      href: "#projects",
+      href: "/#projects",
     },
     // {
     //   title: "blog",

@@ -8,6 +8,7 @@ import { Analytics } from "@vercel/analytics/react"
 
 import { fontHeading, fontInter, fontUrbanist } from "@/config/fonts"
 import { siteConfig } from "@/config/site"
+import { GsapProvider } from "@/providers/gsap-provider"
 import { SmoothScrollProvider } from "@/providers/smooth-scroll-provider"
 import { ThemeProvider } from "@/providers/theme-provider"
 import { cn } from "@/lib/utils"
@@ -78,7 +79,7 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
     <html lang="en">
       <body
         className={cn(
-          "w-full overflow-hidden bg-background font-urbanist antialiased",
+          "w-full overflow-y-scroll bg-background font-urbanist antialiased",
           fontInter.variable,
           fontUrbanist.variable,
           fontHeading.variable
@@ -91,12 +92,14 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
           disableTransitionOnChange
         >
           <SmoothScrollProvider>
-            <Header />
-            {children}
-            {/* <Footer /> */}
-            <Toaster />
-            <Analytics />
-            <TailwindIndicator />
+            <GsapProvider>
+              <Header />
+              {children}
+              {/* <Footer /> */}
+              <Toaster />
+              <Analytics />
+              <TailwindIndicator />
+            </GsapProvider>
           </SmoothScrollProvider>
         </ThemeProvider>
       </body>

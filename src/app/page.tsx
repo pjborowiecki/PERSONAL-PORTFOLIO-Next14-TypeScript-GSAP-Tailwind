@@ -1,6 +1,6 @@
 // import { ContactSection } from "@/components/sections/contact-section"
 // import { HeroSection } from "@/components/sections/hero-section"
-import { ProjectsSection } from "@/components/sections/projects/projects-section"
+import { ProjectsSection } from "@/components/sections/projects-section"
 
 export default function LandingPage(): JSX.Element {
   return (

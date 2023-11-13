@@ -11,7 +11,7 @@ export const projects = [
       source_code:
         "https://github.com/pjborowiecki/SAASY-LAND-Next-14-Starters-With-Authentication-And-Database-Implemented",
       live_demo: "https://saasyland.com",
-      details: "saasy-land",
+      details: "/projects/saasy-land",
     },
     priority: 1,
   },
@@ -24,7 +24,7 @@ export const projects = [
     links: {
       source_code:
         "https://github.com/pjborowiecki/ARKA-Veterinary-Clinic-Page-and-Appointment-Booking-System",
-      details: "arka",
+      details: "/projects/arka",
     },
     priority: 2,
   },
@@ -56,7 +56,7 @@ export const projects = [
   },
   {
     title: "New Images Synthesizer",
-    description: "Deep Learning assignment solution",
+    description: "Deep Learning assignment",
     image: "/images/projects/new-images.png",
     categories: ["deep learning", "all"],
     stack: ["Python", "PyTorch", "NumPy", "OpenCV", "Matplotlib", "Jupyter"],
@@ -70,7 +70,7 @@ export const projects = [
   {
     title: "3D Graphics Engine",
     description: "Virtual Reality assignment",
-    image: "/images/projects/3d-engine.png",
+    image: "/images/projects/3d-graphics.png",
     categories: ["other", "all"],
     stack: ["Python", "NumPy", "Linear Algebra"],
     links: {
