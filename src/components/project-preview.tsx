@@ -53,7 +53,7 @@ export function ProjectPreview({
       variants={scalePreviewImageAnimation}
       initial="initial"
       animate={modalVisible ? "enter" : "leave"}
-      className="pointer-events-none absolute z-[99] hidden h-[300px] w-[400px] items-center justify-center overflow-hidden bg-transparent md:flex"
+      className="pointer-events-none absolute z-[99] flex h-[300px] w-[400px] items-center justify-center overflow-hidden bg-transparent"
     >
       <div
         style={{ top: index * -100 + "%" }}
@@ -64,13 +64,7 @@ export function ProjectPreview({
             className="flex h-full w-full items-center justify-center"
             key={`modal_${index}`}
           >
-            <Image
-              src={project.image}
-              width={400}
-              height={300}
-              alt="image"
-              cn
-            />
+            <Image src={project.image} width={400} height={300} alt="image" />
           </div>
         ))}
       </div>
