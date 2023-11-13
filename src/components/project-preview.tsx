@@ -53,7 +53,7 @@ export function ProjectPreview({
       variants={scalePreviewImageAnimation}
       initial="initial"
       animate={modalVisible ? "enter" : "leave"}
-      className="pointer-events-none absolute z-[99] flex h-[300px] w-[400px] items-center justify-center overflow-hidden bg-transparent"
+      className="pointer-events-none absolute z-[99] hidden h-[300px] w-[400px] items-center justify-center overflow-hidden bg-transparent md:flex"
     >
       <div
         style={{ top: index * -100 + "%" }}
