@@ -13,9 +13,7 @@ export function HeroSection() {
         </h1>
 
         <h3 className="max-w-[42rem] animate-fade-up text-muted-foreground sm:text-xl sm:leading-8">
-          <Balancer>
-            This site is currently under construction. Please check back soon.
-          </Balancer>
+          <Balancer>Full-Stack Developer for Ambitious Projects</Balancer>
         </h3>
       </div>
     </section>

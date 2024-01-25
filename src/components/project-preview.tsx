@@ -55,13 +55,10 @@ export function ProjectPreview({
       animate={modalVisible ? "enter" : "leave"}
       className="pointer-events-none absolute z-[99] flex h-[300px] w-[400px] items-center justify-center overflow-hidden bg-transparent"
     >
-      <div
-        style={{ top: index * -100 + "%" }}
-        className="absolute h-full w-full"
-      >
+      <div style={{ top: index * -100 + "%" }} className="absolute size-full">
         {projects.map((project, index) => (
           <div
-            className="flex h-full w-full items-center justify-center"
+            className="flex size-full items-center justify-center"
             key={`modal_${index}`}
           >
             <Image src={project.image} width={400} height={300} alt="image" />

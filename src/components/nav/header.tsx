@@ -30,7 +30,7 @@ export function Header(): JSX.Element {
           >
             let&apos;s talk
             <span className="sr-only">Let&apos;s talk</span>
-            <Icons.arrowUpRight className="h-2 w-2 transition-all duration-100 ease-out group-hover:rotate-45" />
+            <Icons.arrowUpRight className="size-2 transition-all duration-100 ease-out group-hover:rotate-45" />
           </Link>
           <NavigationMobile navItems={siteConfig.navItems} />
         </div>
