@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import Image from "next/image"
-import { notFound } from "next/navigation"
 import { scalePreviewImageAnimation } from "@/animations/projects-section"
 import type { Project } from "@/types"
 import { motion } from "framer-motion"
 
-import { GsapContext } from "@/providers/gsap-provider"
+import { gsap, ScrollTrigger } from "@/config/gsap"
+import { useIsomorphicLayoutEffect } from "@/hooks/use-isomorphic-layout-effect"
 
 interface ProjectPreviewProps {
   projects: Project[]
@@ -20,32 +20,33 @@ interface ProjectPreviewProps {
 export function ProjectPreview({
   previewModal,
   projects,
-}: ProjectPreviewProps) {
-  const { gsap } = React.useContext(GsapContext)
-  if (!gsap) {
-    console.error("GSAP not initialized")
-    notFound()
-  }
-
+}: ProjectPreviewProps): JSX.Element {
   const { modalVisible, index } = previewModal
-  const modalContainer = React.useRef(null)
+  const modalContainer = React.useRef<HTMLDivElement>(null)
 
-  React.useLayoutEffect(() => {
-    const xTo = gsap.quickTo(modalContainer.current, "left", {
-      duration: 0.8,
-      ease: "power3",
-    })
-    const yTo = gsap.quickTo(modalContainer.current, "top", {
-      duration: 0.8,
-      ease: "power3",
-    })
+  useIsomorphicLayoutEffect(() => {
+    if (!gsap || !ScrollTrigger || !modalContainer.current) return
 
-    window.addEventListener("mousemove", (e) => {
-      const { pageX, pageY } = e
-      xTo(pageX)
-      yTo(pageY - 200)
-    })
-  }, [gsap])
+    const ctx = gsap.context(() => {
+      const xTo = gsap.quickTo(modalContainer.current, "left", {
+        duration: 0.8,
+        ease: "power3",
+      })
+
+      const yTo = gsap.quickTo(modalContainer.current, "top", {
+        duration: 0.8,
+        ease: "power3",
+      })
+
+      window.addEventListener("mousemove", (e) => {
+        const { pageX, pageY } = e
+        xTo(pageX)
+        yTo(pageY - 200)
+      })
+    }, [modalContainer.current])
+
+    return () => ctx.revert()
+  }, [])
 
   return (
     <motion.div

@@ -40,7 +40,7 @@ export function ProjectsSection(): JSX.Element {
               </Balancer>
             </h3>
 
-            <div className="flex h-fit max-w-sm flex-wrap gap-2 lg:justify-end">
+            <div className="flex h-fit max-w-sm flex-wrap gap-x-2 gap-y-4 lg:justify-end">
               {categories.map((category) => {
                 const Icon = Icons[category.icon as keyof typeof Icons]
 

@@ -8,7 +8,6 @@ import { Analytics } from "@vercel/analytics/react"
 
 import { fontHeading, fontInter, fontUrbanist } from "@/config/fonts"
 import { siteConfig } from "@/config/site"
-import { GsapProvider } from "@/providers/gsap-provider"
 import { SmoothScrollProvider } from "@/providers/smooth-scroll-provider"
 import { ThemeProvider } from "@/providers/theme-provider"
 import { cn } from "@/lib/utils"
@@ -92,14 +91,12 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
           disableTransitionOnChange
         >
           <SmoothScrollProvider>
-            <GsapProvider>
-              <Header />
-              {children}
-              {/* <Footer /> */}
-              <Toaster />
-              <Analytics />
-              <TailwindIndicator />
-            </GsapProvider>
+            <Header />
+            {children}
+            {/* <Footer /> */}
+            <Toaster />
+            <Analytics />
+            <TailwindIndicator />
           </SmoothScrollProvider>
         </ThemeProvider>
       </body>

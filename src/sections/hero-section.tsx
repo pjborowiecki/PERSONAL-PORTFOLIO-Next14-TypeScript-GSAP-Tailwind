@@ -1,5 +1,7 @@
 import Balancer from "react-wrap-balancer"
 
+// import { ThemeToggle } from "@/components/theme-toggle"
+
 export function HeroSection() {
   return (
     <section
@@ -7,6 +9,7 @@ export function HeroSection() {
       aria-label="hero section"
       className="mt-16 w-full md:mt-48"
     >
+      {/* <ThemeToggle /> */}
       <div className="container flex flex-col items-center gap-6 text-center">
         <h1 className="animate-fade-up font-urbanist text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
           <Balancer>Reliable Software Developer</Balancer>
