@@ -12,10 +12,9 @@ import { SmoothScrollProvider } from "@/providers/smooth-scroll-provider"
 import { ThemeProvider } from "@/providers/theme-provider"
 import { cn } from "@/lib/utils"
 import { Toaster } from "@/components/ui/toaster"
-import { Header } from "@/components/nav/header"
+import { VerticalNavigation } from "@/components/nav/vertical-navigation"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
-
-// import {Footer} from '@/components/nav/footer'
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -78,7 +77,7 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
     <html lang="en">
       <body
         className={cn(
-          "w-full overflow-y-scroll bg-background font-urbanist antialiased",
+          "size-full min-h-screen bg-background font-urbanist text-foreground antialiased",
           fontInter.variable,
           fontUrbanist.variable,
           fontHeading.variable
@@ -91,11 +90,11 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
           disableTransitionOnChange
         >
           <SmoothScrollProvider>
-            <Header />
+            <VerticalNavigation />
             {children}
-            {/* <Footer /> */}
             <Toaster />
             <Analytics />
+            {/* <ThemeToggle /> */}
             <TailwindIndicator />
           </SmoothScrollProvider>
         </ThemeProvider>

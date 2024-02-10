@@ -1,10 +1,9 @@
-import { type NavItem, type NavItemFooter } from "@/types"
-
 const links = {
   github:
     "https://github.com/pjborowiecki/PERSONAL-PORTFOLIO-Next14-TypeScript-GSAP-Tailwind",
   twitter: "https://twitter.com/pjborowiecki",
   linkedin: "https://www.linkedin.com/in/pjborowiecki",
+  youtube: "https://www.youtube.com",
   discord: "",
   authorsWebsite: "https://pjborowiecki.com",
   authorsGitHub: "https://github.com/pjborowiecki",
@@ -40,24 +39,4 @@ export const siteConfig = {
     "Node.js developer",
     "Blockchain developer",
   ],
-  navItems: [
-    // {
-    //   title: "about",
-    //   href: "#about",
-    // },
-    // {
-    //   title: "services",
-    //   href: "#services",
-    // },
-    {
-      title: "projects",
-      href: "/#projects",
-    },
-    // {
-    //   title: "blog",
-    //   href: "/blog",
-    // },
-  ] satisfies NavItem[],
-  navItemsMobile: [],
-  navItemsFooter: [] satisfies NavItemFooter[],
 }
