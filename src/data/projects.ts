@@ -3,10 +3,10 @@ import { type Project } from "@/types"
 export const projects = [
   {
     title: "SaaSy Land",
-    description: "Modern full-stack templates",
+    description: "Modern full-stack SaaS templates",
     categories: ["web dev", "all"],
     image: "/images/projects/saasy-land.png",
-    stack: ["TypeScript", "Next", "NextAuth", "Tailwind", "Postgres", "Prisma"],
+    stack: ["TypeScript", "Next", "NextAuth", "Postgres", "Prisma", "Tailwind"],
     links: {
       source_code:
         "https://github.com/pjborowiecki/SAASY-LAND-Next-14-Starters-With-Authentication-And-Database-Implemented",
@@ -20,13 +20,196 @@ export const projects = [
     description: "Appointment booking system",
     categories: ["web dev", "all"],
     image: "/images/projects/arka.png",
-    stack: ["TypeScript", "Next", "Clerk", "MySQL", "Drizzle", "Tailwind"],
+    stack: ["TypeScript", "Next", "NextAuth", "MySQL", "Drizzle", "Tailwind"],
     links: {
       source_code:
         "https://github.com/pjborowiecki/ARKA-Veterinary-Clinic-Page-and-Appointment-Booking-System",
+      live_demo: "https://todo.com",
       details: "/projects/arka",
     },
     priority: 2,
+  },
+  {
+    title: "GROOVE HEAVEN",
+    description: "Multi-Vendor online music store",
+    categories: ["web dev", "all"],
+    image: "/images/projects/to-do.png",
+    stack: ["TS", "Next", "Postgres", "Drizzle", "Redux", "Stripe"],
+    links: {
+      source_code:
+        "https://github.com/pjborowiecki/GROOVE-HEAVEN-Advanced-Multi-Vendor-E-Commerce-Music-Store-with-Admin-Panel",
+      live_demo: "",
+      details: "/projects/groove-heaven",
+    },
+    priority: 3,
+  },
+  {
+    title: "QUANTUM STASH",
+    description: "Inventory management SaaS",
+    categories: ["web dev", "all"],
+    image: "/images/projects/to-do.png",
+    stack: ["TS", "Next", "Next-Auth", "Postgres", "Drizzle", "Tailwind"],
+    links: {
+      source_code:
+        "https://github.com/pjborowiecki/QUANTUM-STASH-inventory-Management-SaaS-NextJs-TypeScript-NextAuth-v5-Postgres-Drizzle-Tailwind",
+      live_demo: "https://todo.com",
+      details: "/projects/quantum-stash",
+    },
+    priority: 4,
+  },
+  {
+    title: "MOON BNB",
+    description: "Moon-based AirBnB equivalent",
+    categories: ["web dev", "all"],
+    image: "/images/projects/to-do.png",
+    stack: ["Microservices", "Nest", "React", "Docker", "Kubernetes", "AWS"],
+    links: {
+      source_code:
+        "https://github.com/pjborowiecki/MOON-BNB-Reservations-Microservices-API-NestJS-MongoDB-Mongoose-Passport-Joi",
+      live_demo: "https//todo.com",
+      details: "/projects/moon-bnb",
+    },
+    priority: 5,
+  },
+  {
+    title: "CHAT BITE",
+    description: "Modern real-time chat",
+    categories: ["web dev", "all"],
+    image: "/images/projects/to-do.png",
+    stack: ["TypeScript", "Next", "Node", "GraphQL", "MongoDB", "Prisma"],
+    links: {
+      source_code:
+        "https://github.com/pjborowiecki/CHAT-BITE-RealTime-Chat-TS-NextJS-NodeJS-GraphQL-Apollo-MongoDB-Prisma-Tailwind",
+      live_demo: "https//todo.com",
+      details: "/projects/chat-bite",
+    },
+    priority: 6,
+  },
+  {
+    title: "TICKET THING",
+    description: "Event ticket resale marketplace",
+    categories: ["web dev", "all"],
+    image: "/images/projects/to-do.png",
+    stack: ["Microservices", "TS", "Node", "MongoDB", "Docker", "Kubernetes"],
+    links: {
+      source_code:
+        "https://github.com/pjborowiecki/TICKET-THING-Microservices-Tickets-Resale-Marketplace",
+      live_demo: "https://todo.com",
+      details: "/projects/ticket-thing",
+    },
+    priority: 7,
+  },
+  {
+    title: "LIBERUM VETO",
+    description: "Live polling application",
+    categories: ["web dev", "all"],
+    image: "/images/projects/to-do.png",
+    stack: ["React", "Node", "Nest", "SocketIO", "Redis", "Docker"],
+    links: {
+      source_code:
+        "https://github.com/pjborowiecki/LIBERUM-VETO-Live-Polling-App-NodeJS-NestJS-React-SocketIO-Redis-Docker",
+      live_demo: "https://todo.com",
+      details: "/projects/liberum-veto",
+    },
+    priority: 8,
+  },
+  {
+    title: "BILL QUILL",
+    description: "Invoice generation SaaS",
+    categories: ["web dev", "all"],
+    image: "/images/projects/to-do.png",
+    stack: ["TypeScript", "Next", "MongoDB", "Prisma", "Tailwind"],
+    links: {
+      source_code:
+        "https://github.com/pjborowiecki/BILL-QUILL-Invoicing-App-NextJS-React-TypeScript-MongoDB-Prisma-Tailwind",
+      live_demo: "https://todo.com",
+      details: "/projects/bill-quill",
+    },
+    priority: 9,
+  },
+  {
+    title: "SILK TALK",
+    description: "Real-time chat application",
+    categories: ["web dev", "all"],
+    image: "/images/projects/silk-talk.png",
+    stack: ["Nest", "React", "GraphQL", "Apollo", "Redis", "MongoDB", "Docker"],
+    links: {
+      source_code:
+        "https://github.com/pjborowiecki/SILK-TALK-RealTime-Chat-TypeScript-NestJS-GraphQL-Apollo-Redis-MongoDB-Mongoose-React-Tailwind",
+      live_demo: "https://todo.com",
+      details: "/projects/silk-talk",
+    },
+    priority: 10,
+  },
+  {
+    title: "AI Overflow",
+    description: "Stack Overflow alternative",
+    categories: ["web dev", "all"],
+    image: "/images/projects/ai-overflow.png",
+    stack: ["TypeScript", "Next", "NextAuth", "Prisma", "Postgres", "Tailwind"],
+    links: {
+      source_code:
+        "https://github.com/pjborowiecki/AI-OVERFLOW-Modern-Stack-Overflow-Alternative",
+      live_demo: "",
+      details: "/projects/ai-overflow",
+    },
+    priority: 11,
+  },
+  {
+    title: "RANDEZ VIEW",
+    description: "Dating web application",
+    categories: ["web dev", "all"],
+    image: "/images/projects/to-do.png",
+    stack: [
+      "Java",
+      "Spring Boot",
+      "Maven",
+      "Spring Data JPA",
+      "Docker",
+      "React",
+    ],
+    links: {
+      source_code:
+        "https://github.com/pjborowiecki/RANDEZ-VIEW-Dating-Web-App-Java-SpringBoot",
+      live_demo: "https://todo.com",
+      details: "/projects/randez-view",
+    },
+    priority: 12,
+  },
+  {
+    title: "BLOGGR",
+    description: "Blogging web application",
+    categories: ["web dev", "all"],
+    image: "/images/projects/to-do.png",
+    stack: [
+      "Java",
+      "Spring Boot",
+      "Data JPA",
+      "Spring Security",
+      "React",
+      "Docker",
+    ],
+    links: {
+      source_code:
+        "https://github.com/pjborowiecki/BLOGGR-Java-SpringBoot-DataJPA-SpringSecurity-React-Docker",
+      live_demo: "https://todo.com",
+      details: "/projects/bloggr",
+    },
+    priority: 13,
+  },
+  {
+    title: "HOTEL CALIFORNIA",
+    description: "Hotel room booking and management system",
+    categories: ["web dev", "all"],
+    image: "/images/projects/to-do.png",
+    stack: ["Java", "Spring Boot", "Data JPA", "React", "Docker"],
+    links: {
+      source_code:
+        "https://github.com/pjborowiecki/HOTEL-CALIFORNIA-Hotel-Rooms-Booking-And-Management-System-Java-Spring-Boot-React",
+      live_demo: "https://todo.com",
+      details: "/projects/hotel-california",
+    },
+    priority: 14,
   },
   {
     title: "N-Body Simulator",
@@ -37,9 +220,9 @@ export const projects = [
     links: {
       source_code:
         "https://github.com/pjborowiecki/COMP3577-Parallel-Scientific-Computing-I",
-      details: "n-body-simulator",
+      details: "/projects/n-body-simulator",
     },
-    priority: 4,
+    priority: 15,
   },
   {
     title: "Bi-Pedal Walker",
@@ -50,9 +233,9 @@ export const projects = [
     links: {
       source_code:
         "https://github.com/pjborowiecki/COMP3667-Reinforcement-Learning",
-      details: "bipedal-walker",
+      details: "/projects/bipedal-walker",
     },
-    priority: 5,
+    priority: 16,
   },
   {
     title: "New Images Synthesizer",
@@ -63,9 +246,9 @@ export const projects = [
     links: {
       source_code:
         "https://github.com/pjborowiecki/COMP3547-Deep-Learning/tree/main",
-      details: "synthesizing-new-images",
+      details: "/projects/synthesizing-new-images",
     },
-    priority: 6,
+    priority: 17,
   },
   {
     title: "3D Graphics Engine",
@@ -76,35 +259,8 @@ export const projects = [
     links: {
       source_code:
         "https://github.com/pjborowiecki/COMP3671-Virtual-and-Augmented-Reality",
-      details: "3d-graphics-engine",
+      details: "/projects/3d-graphics-engine",
     },
-    priority: 7,
-  },
-  {
-    title: "AI Overflow",
-    description: "Stack Overflow alternative",
-    image: "/images/projects/ai-overflow.png",
-    categories: ["web dev", "all"],
-    stack: ["TypeScript", "Next", "NextAuth", "Prisma", "Postgres", "Tailwind"],
-    links: {
-      source_code:
-        "https://github.com/pjborowiecki/AI-OVERFLOW-Modern-Stack-Overflow-Alternative",
-      live_demo: "",
-      details: "ai-overflow",
-    },
-    priority: 8,
-  },
-  {
-    title: "SEAT FRENZY",
-    description: "Restaurant table booking system",
-    image: "/images/projects/seat-frenzy.png",
-    categories: ["web dev", "all"],
-    stack: ["TypeScript", "Next", "Drizzle", "MySQL", "Tailwind", "Zod"],
-    links: {
-      source_code:
-        "https://github.com/pjborowiecki/SEAT-FRENZY-Restaurant-Table-Booking-System",
-      details: "seat-frenzy",
-    },
-    priority: 9,
+    priority: 18,
   },
 ] satisfies Project[]

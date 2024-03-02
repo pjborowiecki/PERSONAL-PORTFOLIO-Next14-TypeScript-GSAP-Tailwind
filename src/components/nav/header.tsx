@@ -1,39 +1,36 @@
 import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
-import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/components/ui/button"
-import { Icons } from "@/components/icons"
-import { Navigation } from "@/components/nav/navigation"
-import { NavigationMobile } from "@/components/nav/navigation-mobile"
+import { mainNavItems } from "@/data/nav-items"
 
 export function Header(): JSX.Element {
   return (
-    <header className="sticky top-0 z-40 flex h-16 w-full bg-background">
-      <div className="container flex items-center justify-between p-4">
-        <Link
-          href="/"
-          className="flex items-center justify-center gap-2 text-lg font-bold tracking-wide transition-all duration-300 ease-in-out"
-        >
+    <header className="sticky top-16 mx-auto flex h-12 w-[80vw] items-center justify-between px-2">
+      <div className="flex items-center justify-center">
+        <h3 className="text-[32px] font-semibold leading-none tracking-tight">
           {siteConfig.name}
-        </Link>
-
-        <div className="flex items-center justify-center gap-2 md:gap-6">
-          <Navigation navItems={siteConfig.navItems} />
-          <Link
-            aria-label="Get started"
-            href="mailto:hello@pjborowiecki.com"
-            className={cn(
-              buttonVariants({ variant: "outline" }),
-              "group gap-2 rounded-full border-foreground px-6 py-4 text-base font-semibold leading-none tracking-wide hover:bg-foreground hover:text-background"
-            )}
-          >
-            let&apos;s talk
-            <span className="sr-only">Let&apos;s talk</span>
-            <Icons.arrowUpRight className="h-2 w-2 transition-all duration-100 ease-out group-hover:rotate-45" />
-          </Link>
-          <NavigationMobile navItems={siteConfig.navItems} />
+        </h3>
+      </div>
+      <div className="flex items-center gap-14">
+        <nav>
+          <ul className="flex items-center gap-14">
+            {mainNavItems.map((item) => (
+              <li key={item.title}>
+                <Link
+                  href={item.href}
+                  className="text-[24px] font-normal tracking-tight text-muted-foreground transition-all duration-150 ease-in-out hover:text-foreground"
+                >
+                  {item.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <div className="group flex size-11 cursor-pointer flex-col items-end justify-center gap-0.5 rounded-full border-2 border-foreground p-2.5 transition-all duration-150 ease-in-out hover:bg-foreground">
+          <span className="h-0.5 w-full bg-foreground transition-all duration-300 ease-in-out group-hover:bg-background" />
+          <span className="h-0.5 w-1/2 bg-foreground transition-all duration-300 ease-in-out group-hover:w-full group-hover:bg-background" />
         </div>
+        {/* <div>pl/en</div> */}
       </div>
     </header>
   )

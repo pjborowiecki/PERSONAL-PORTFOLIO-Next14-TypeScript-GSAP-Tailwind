@@ -5,7 +5,9 @@ import Balancer from "react-wrap-balancer"
 
 import { categories } from "@/data/categories"
 import { projects } from "@/data/projects"
+
 import { cn } from "@/lib/utils"
+
 import { Badge } from "@/components/ui/badge"
 import { Icons } from "@/components/icons"
 import { ProjectCard } from "@/components/project-card"
@@ -27,7 +29,7 @@ export function ProjectsSection(): JSX.Element {
       <div className="container overflow-visible">
         <div className="flex flex-col space-y-6">
           <h2 className="ml-[-4px] text-4xl font-black leading-none tracking-tighter sm:text-5xl xl:text-6xl 2xl:text-7xl">
-            Recent Projects
+            Selected Projects
           </h2>
           <div className="flex w-full flex-col justify-between gap-8 lg:flex-row lg:gap-0">
             <h3 className="text-lg font-medium leading-8 text-muted-foreground md:max-w-3xl md:text-xl lg:max-w-2xl lg:text-2xl">
@@ -40,7 +42,7 @@ export function ProjectsSection(): JSX.Element {
               </Balancer>
             </h3>
 
-            <div className="flex h-fit max-w-sm flex-wrap gap-2 lg:justify-end">
+            <div className="flex h-fit max-w-sm flex-wrap gap-x-2 gap-y-4 lg:justify-end">
               {categories.map((category) => {
                 const Icon = Icons[category.icon as keyof typeof Icons]
 
@@ -49,17 +51,14 @@ export function ProjectsSection(): JSX.Element {
                     key={category.title}
                     variant="outline"
                     className={cn(
-                      "flex h-fit w-fit cursor-pointer items-center justify-center gap-1.5 rounded-full border-foreground px-5 py-2 text-sm font-medium tracking-wide md:hover:border-border md:hover:bg-foreground md:hover:text-background xl:text-base",
+                      "flex size-fit cursor-pointer items-center justify-center gap-1.5 rounded-full border-foreground px-5 py-2 text-sm font-medium tracking-wide md:hover:border-border md:hover:bg-foreground md:hover:text-background xl:text-base",
                       category.title === activeCategory &&
                         "cursor-default bg-foreground text-background",
                       category.title === "all" && "hidden xl:flex"
                     )}
                     onClick={() => setActiveCategory(category.title)}
                   >
-                    <Icon
-                      className="h-4 w-4 md:h-5 md:w-5"
-                      aria-hidden="true"
-                    />
+                    <Icon className="size-4 md:size-5" aria-hidden="true" />
 
                     {category.title}
                   </Badge>
