@@ -1,3 +1,4 @@
+import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
@@ -16,4 +17,4 @@ gsap.defaults({
   duration: DURATION,
 })
 
-export { ScrollTrigger, DURATION, GOLDEN_RATIO, gsap }
+export { ScrollTrigger, useGSAP, gsap, DURATION, GOLDEN_RATIO }

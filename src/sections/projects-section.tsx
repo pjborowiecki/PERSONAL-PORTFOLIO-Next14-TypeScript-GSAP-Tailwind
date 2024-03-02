@@ -5,7 +5,9 @@ import Balancer from "react-wrap-balancer"
 
 import { categories } from "@/data/categories"
 import { projects } from "@/data/projects"
+
 import { cn } from "@/lib/utils"
+
 import { Badge } from "@/components/ui/badge"
 import { Icons } from "@/components/icons"
 import { ProjectCard } from "@/components/project-card"

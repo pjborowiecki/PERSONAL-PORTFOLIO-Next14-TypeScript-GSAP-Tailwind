@@ -3,14 +3,17 @@ import "@/styles/mdx.css"
 
 import * as React from "react"
 import type { Metadata, Viewport } from "next"
-import { env } from "@/env.mjs"
-import { Analytics } from "@vercel/analytics/react"
 
-import { fontHeading, fontInter, fontUrbanist } from "@/config/fonts"
+import { env } from "@/env.mjs"
+// import { Analytics } from "@vercel/analytics/react"
+
+import { fontInter } from "@/config/fonts"
 import { siteConfig } from "@/config/site"
+
 import { SmoothScrollProvider } from "@/providers/smooth-scroll-provider"
 import { ThemeProvider } from "@/providers/theme-provider"
 import { cn } from "@/lib/utils"
+
 import { Toaster } from "@/components/ui/toaster"
 import { Header } from "@/components/nav/header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
@@ -78,10 +81,8 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
     <html lang="en">
       <body
         className={cn(
-          "w-full overflow-y-scroll bg-background font-urbanist antialiased",
-          fontInter.variable,
-          fontUrbanist.variable,
-          fontHeading.variable
+          "w-full overflow-y-scroll bg-background text-foreground antialiased",
+          fontInter.variable
         )}
       >
         <ThemeProvider
@@ -95,7 +96,7 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
             {children}
             {/* <Footer /> */}
             <Toaster />
-            <Analytics />
+            {/* <Analytics /> */}
             <TailwindIndicator />
           </SmoothScrollProvider>
         </ThemeProvider>

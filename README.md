@@ -1,3 +1,3 @@
-** CURRENTLY UNDER DEVELOPMENT **
+**CURRENTLY UNDER DEVELOPMENT**
 
 Please check back soon.
