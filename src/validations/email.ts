@@ -38,3 +38,6 @@ export const contactFormSchema = z.object({
       message: "Message must be made of at most 10240 characters",
     }),
 })
+
+export type NewsletterSignUpInput = z.infer<typeof newsletterSignUpSchema>
+export type ContactFormInput = z.infer<typeof contactFormSchema>

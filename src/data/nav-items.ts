@@ -3,14 +3,14 @@ import type { NavItem } from "@/types"
 export const mainNavItems = [
   {
     title: "services",
-    href: "#services",
+    href: "#services-section",
   },
   {
     title: "projects",
-    href: "#projects",
+    href: "#projects-section",
   },
   {
     title: "contact",
-    href: "#contact",
+    href: "#contact-section",
   },
 ] satisfies NavItem[]

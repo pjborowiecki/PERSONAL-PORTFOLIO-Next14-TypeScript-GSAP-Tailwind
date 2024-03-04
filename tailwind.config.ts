@@ -122,6 +122,7 @@ module.exports = {
         "fade-down": "fade-down 0.5s",
         "fade-in": "fade-in 0.4s",
         "fade-out": "fade-out 0.4s",
+        spotlight: "spotlight 2s ease .75s 1 forwards",
       },
     },
   },

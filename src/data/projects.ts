@@ -160,14 +160,7 @@ export const projects = [
     description: "Dating web application",
     categories: ["web dev", "all"],
     image: "/images/projects/to-do.png",
-    stack: [
-      "Java",
-      "Spring Boot",
-      "Maven",
-      "Spring Data JPA",
-      "Docker",
-      "React",
-    ],
+    stack: ["Java", "Spring Boot", "Maven", "Data JPA", "Docker", "React"],
     links: {
       source_code:
         "https://github.com/pjborowiecki/RANDEZ-VIEW-Dating-Web-App-Java-SpringBoot",

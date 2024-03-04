@@ -25,7 +25,11 @@ export function ProjectsSection(): JSX.Element {
   )
 
   return (
-    <section className="w-full pb-64 pt-16 md:pt-24 lg:pt-32">
+    <section
+      id="projects-section"
+      aria-label="Projects section"
+      className="w-full pb-64 pt-16 md:pt-24 lg:pt-32"
+    >
       <div className="container overflow-visible">
         <div className="flex flex-col space-y-6">
           <h2 className="ml-[-4px] text-4xl font-black leading-none tracking-tighter sm:text-5xl xl:text-6xl 2xl:text-7xl">
