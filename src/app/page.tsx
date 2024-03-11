@@ -6,9 +6,9 @@ import { ServicesSection } from "@/sections/services-section"
 
 export default function LandingPage(): JSX.Element {
   return (
-    <main className="grid w-full grid-cols-1 items-center justify-center">
+    <main className="size-full">
       <HeroSection />
-      {/* <AboutSection /> */}
+      <AboutSection />
       {/* <ServicesSection /> */}
       {/* <ProjectsSection /> */}
       {/* <ContactSection /> */}
