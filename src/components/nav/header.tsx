@@ -3,9 +3,9 @@
 import * as React from "react"
 import Link from "next/link"
 
-import { gsap, useGSAP } from "@/config/gsap"
+import { gsap, ScrollTrigger, useGSAP } from "@/config/gsap"
 import { siteConfig } from "@/config/site"
-import { mainNavItems } from "@/data/nav-items"
+import { mainNavItems, mobileNavItems } from "@/data/nav-items"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 
@@ -15,7 +15,26 @@ export function Header(): JSX.Element {
 
   const { contextSafe } = useGSAP(
     () => {
-      gsap.set(".menu-link-item-holder", { y: 75 })
+      gsap.set("#menu-link-item-holder", { y: 75 })
+
+      ScrollTrigger.create({
+        start: "top top",
+        end: "+=100",
+        onEnter: () =>
+          gsap.to("#nav-links-desktop", {
+            opacity: 0,
+            delay: 0.2,
+            duration: 0.5,
+            ease: "power4.inOut",
+          }),
+        onLeaveBack: () =>
+          gsap.to("#nav-links-desktop", {
+            opacity: 1,
+            delay: 0.2,
+            duration: 0.5,
+            ease: "power4.inOut",
+          }),
+      })
     },
     { scope: header }
   )
@@ -29,7 +48,7 @@ export function Header(): JSX.Element {
           clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
           ease: "power4.inOut",
         })
-        .to(".menu-link-item-holder", {
+        .to("#menu-link-item-holder", {
           y: 0,
           duration: 1,
           stagger: 0.1,
@@ -46,7 +65,7 @@ export function Header(): JSX.Element {
 
   return (
     <header ref={header} className="w-full">
-      <div className="fixed inset-x-0 top-0 z-[99] mx-auto flex h-24 w-full max-w-[1480px] items-center justify-between px-8">
+      <div className="fixed inset-x-0 top-0 z-[98] mx-auto flex h-24 w-full max-w-[1480px] items-center justify-between px-8 md:px-16">
         <Link
           id="site-title"
           href="/"
@@ -78,7 +97,7 @@ export function Header(): JSX.Element {
           <Button
             variant="ghost"
             id="menu-toggle-button"
-            className="group flex size-10 cursor-pointer flex-col items-end justify-center gap-0.5 rounded-full border-2 border-foreground p-2.5 transition-all duration-150 ease-in-out hover:bg-foreground md:size-12"
+            className="group !z-[99] flex size-10 cursor-pointer flex-col items-end justify-center gap-0.5 rounded-full border-2 border-foreground p-2.5 transition-all duration-150 ease-in-out hover:bg-foreground md:size-12"
             onClick={toggleMenu}
           >
             <span
@@ -97,10 +116,25 @@ export function Header(): JSX.Element {
         id="menu-overlay"
         className={cn(
           "overlay-clip-path",
-          "fixed left-0 top-0 z-[98] flex h-screen w-screen items-center justify-between bg-gradient-to-br from-red-500 to-red-300 p-[2em]"
+          "fixed left-0 top-0 z-[98] flex h-screen w-screen flex-col items-center justify-center gap-4 bg-gradient-to-br from-red-500 to-red-300 p-[2em]"
         )}
       >
-        overlay
+        <ul className="flex flex-col items-center gap-2">
+          {mobileNavItems.map((item) => (
+            <li key={item.title} onClick={toggleMenu}>
+              <Link
+                href={item.href}
+                className="text-[36px] font-medium capitalize"
+              >
+                {item.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        <Button className="" onClick={toggleMenu}>
+          close
+        </Button>
       </div>
     </header>
   )

@@ -5,8 +5,8 @@ import { cn } from "@/lib/utils"
 
 export function HeroSection(): JSX.Element {
   return (
-    <section id="hero-section" aria-label="hero section">
-      <div className="mx-auto flex size-full min-h-screen max-w-[1480px] flex-col justify-between px-8 pt-20">
+    <section id="hero-section" aria-label="Hero section">
+      <div className="mx-auto flex size-full min-h-screen max-w-[1480px] flex-col justify-between px-8 pt-20 md:px-16">
         <div className="flex flex-1 items-center justify-end pr-[8vw]">
           <div className="w-[460px] space-y-6 md:space-y-10 lg:w-[500px]">
             <h2 className="text-[24px] font-medium leading-normal tracking-tight sm:text-[30px] md:text-[36px] lg:text-[40px]">

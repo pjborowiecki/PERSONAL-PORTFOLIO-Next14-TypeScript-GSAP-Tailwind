@@ -9,9 +9,9 @@ export default function LandingPage(): JSX.Element {
     <main className="size-full">
       <HeroSection />
       <AboutSection />
-      {/* <ServicesSection /> */}
-      {/* <ProjectsSection /> */}
-      {/* <ContactSection /> */}
+      <ServicesSection />
+      <ProjectsSection />
+      <ContactSection />
     </main>
   )
 }
